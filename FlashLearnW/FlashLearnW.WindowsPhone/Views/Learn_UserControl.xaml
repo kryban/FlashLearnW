@@ -7,8 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400"
-    Name="Learn_UCtrl">
+    d:DesignWidth="400">
 
     <UserControl.Resources>
         <Style TargetType="Button">
@@ -29,7 +28,7 @@
         </ResourceDictionary>
     </UserControl.Resources>-->
 
-    <Grid Name="Card_grid">
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="45*"/>
             <RowDefinition Height="45*"/>
@@ -44,8 +43,8 @@
 
             <TextBlock Grid.Row="0" Text="Question" FontSize="30" />
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
-                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
-                     Name="TextBox_Question"  Text="{Binding Question, Mode=TwoWay}" />
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                     />
         </Grid>
 
         <Grid Grid.Row="1">
@@ -59,8 +58,7 @@
                 <Button Content="Show" HorizontalAlignment="Right" BorderThickness="0"/>
             </Grid>
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
-                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
-                     Name="TextBox_Answer"  Text="{Binding Answer, Mode=S}" />
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
         </Grid>
         
         <Grid Grid.Row="2">
