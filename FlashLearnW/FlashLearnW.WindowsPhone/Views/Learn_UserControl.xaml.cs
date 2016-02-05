@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using FlashLearnW.Models;
+
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace FlashLearnW.Views
@@ -22,6 +24,14 @@ namespace FlashLearnW.Views
         public Learn_UserControl()
         {
             this.InitializeComponent();
+
+            var Loader = new CardSetLoader();
+            Loader.LoadCardSetByName("default");
+
+            Learn_UCtrl.DataContext = Loader.usrSet;
+
+            // TextBox_Question.DataContext = Loader.usrSet.Cards.First();
+            Card_grid.DataContext = Loader.usrSet.Cards.First();
         }
     }
 }
