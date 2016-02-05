@@ -1,0 +1,69 @@
+﻿
+Ideeën om uit te werken:
+------------------------
+
+Als Save() wordt aangeroepen en de huidige kaartenset is nog niet opgeslagen op schijf, dan moet SaveAs() aangeroepen worden.
+
+Een op dat moment getoonde kaart moet ook gewijzigd kunnen worden. De functionaliteit is vergelijkbaar met het toevoegen en bewarne van 
+een nieuwe kaart. Alleen bij een nieuwe kaart worden alle velden leeggemaakt, tewijl bij wijzigen de bestaande data bewaard moet blijven.
+Hoe de gewizigde kaart bewaard blijft vervolgens hetzelfde.
+
+Als de huidige kaartenset gewijzigd is, en het is nog niet opgeslagen, en de appliatie wordt afgesloten dan moet Save worden aangeroepen. 
+
+Als de huidige kaartenset gewijzigd is, en het is nog niet opgeslagen, dan moet de Titel aangevuld worden met een '*'.
+
+Naam van de kaartensetnaam moet in de titel getoond worden.
+
+Breng een aantal instellingen naar config files.
+
+Als de laatste kaart uit de set verwijderd wordt, en vervolgens wordt weer op Delete gedrukt, dan moet er een meding komen dat 
+er geen kaarten meer verwijderd kunnen worden. 
+
+Voor elke verwijdering moet een bevestiging gevraagd worden .
+
+Gereed maken voor als dingen niet goed gaan. (try/catch blokken maken)
+Alle methodes nagaan of de kans bestaat dat er iets misgaat en zo ja, wat er dan moet gebeuren.
+
+Er moet een quiz functie komen.
+
+In file helper wordt in de construtor een new Serializer(); geberuikt. 
+Dee koppeling zou wellicht losser kunnen, door de koppeling te injecteren. 
+Waarschijnlijk een constructor er naast zetten. 
+
+Backup naar Dropbox mogelijk maken.
+
+
+
+
+Kaart uitbreiden met de volgende eigenschappen: 
+NextInterval = wat wordt de volgende herinnering in hoeveelheid dagen
+PastInterval = wat was de vorige herinnering in hoeveelheid dagen
+Laastste moment dat kaart getoond is = datum
+Volgende moment dat kaart getond wordt = datum
+Forgetting index = ??? in SuperMemo is het een % percentage
+Moeilijkheidgraad = de plaats van een kaart van alle kaarten. Plaats 1 is de moeilijkste
+Repetitions = Totaal aantal keren dat een kaart gerepeteerd is.
+
+Het feit sat een kaart getoond is, wordt vastgelegd op het moment dat het is bentwoord. 
+Op dat moment wordt het aantal iteraties van die kaart met 1 verhoogd 
+
+Refactor Modify() in CardMaintainer. Hetm oet één ding kunnen en niet 2.
+
+Een button maken waarmee toekomstige lessen getoond worden.
+Dus aankomende dagen en het aantal kaarten wat op die dag uit de current set getoond zullen worden.
+Misschien als vervolgmogelijkheid dat op dat aantal geklikt kan worden, zodat alvast die 'les' genomen kan worden.
+Let op, wellicht is dit niet verantwoord in het kader van de leercurve van de algoritme !
+
+CardMaintainer krijgt de kaart die ht moet bewerken via de constructor binnen. 
+Dat is niet handig, aangezien in mainscreen de referentie naar CardMaintainter in het begin al gemaakt word.
+De current card wijzigt namelijk heel vaak en de methoden in mainscreen zullen de cardmaintainer voor verschillende kaarten gebruiken.
+
+CentralSettings class vervangen door app.config
+
+//////// Semantic logging service
+You can now edit the configuration file to log events from your own application by opening 'SemanticLogging-svc.xml'.
+To get IntelliSense from the XML schema file, you can open the configuration in Microsoft Visual Studio.
+After the configuration is updated, start the Windows service by executing 'SemanticLogging-svc.exe -start' from an elev
+ated command prompt.
+
+//////// xx

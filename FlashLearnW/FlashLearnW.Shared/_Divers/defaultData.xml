@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <AllCardSets>
+    <CardSet>
+      <Name>Default cardSet</Name>
+      <Description>This is a default card set</Description>
+      <Cards>
+        <Card>
+          <Question>Default Card Q</Question>
+          <Answer>Default Card A</Answer>
+          <Age>0</Age>
+        </Card>
+        <Card>
+          <Question>Default Card Q - This is the second default card</Question>
+          <Answer>Default Card A - This is the second default card</Answer>
+          <Age>0</Age>
+        </Card>
+        <Card>
+          <Question>Default Card Q - This is the third default card</Question>
+          <Answer>Default Card A - This is the third default card</Answer>
+          <Age>0</Age>
+        </Card>
+        <Card>
+          <Question>Default Card Q - This is the fourth default card</Question>
+          <Answer>Default Card A - This is the fourth default card</Answer>
+          <Age>0</Age>
+        </Card>
+      </Cards>
+    </CardSet>
+  </AllCardSets>
+  <UserName>Default UserName</UserName>
+</UserSet>

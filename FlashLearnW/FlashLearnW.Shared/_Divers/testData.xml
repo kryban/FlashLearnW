@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserSet_Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UserCardSets>
+    <CardSet_Model>
+      <Name>Karoy's kaartenset</Name>
+      <Description>Dit is een eerste kaartenset om de XML te bekijken</Description>
+      <Cards>
+        <Card_Model>
+          <Question>Dit is de eerste vraag</Question>
+          <Answer>Met een eerste antwoord</Answer>
+          <Age>0</Age>
+        </Card_Model>
+        <Card_Model>
+          <Question>Te volgen met een tweede</Question>
+          <Answer>En ee kort antwoord</Answer>
+          <Age>0</Age>
+        </Card_Model>
+        <Card_Model>
+          <Question>Derde vraag waarop een antwoord wacht. Zal het de juiste zijn?</Question>
+          <Answer>Ja, het is de juiste. Net een liefdesverhaal</Answer>
+          <Age>0</Age>
+        </Card_Model>
+        <Card_Model>
+          <Question>De ene laatste.</Question>
+          <Answer>Hierop zou een antwoord met meerdere regels moeten volgen. Dus we tikken nog even door zodat er hopelijk een veldvullend antwoord komt.</Answer>
+          <Age>0</Age>
+        </Card_Model>
+        <Card_Model>
+          <Question>En de hekkensluiter is nummer 5 in dit geval.</Question>
+          <Answer>Goed gedaan!</Answer>
+          <Age>0</Age>
+        </Card_Model>
+      </Cards>
+    </CardSet_Model>
+  </UserCardSets>
+  <UserName>Karoy</UserName>
+</UserSet_Model>

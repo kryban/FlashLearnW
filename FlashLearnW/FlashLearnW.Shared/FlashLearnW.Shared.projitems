@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>165f45c2-5384-45c5-b9af-02e704538a52</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FlashLearnW</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="$(MSBuildThisFileDirectory)App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\AppSettingsWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\AppSettingsNames.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\DefaultSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\DataLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\DataSerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DataModel\SampleDataSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICardExplorer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICardMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICardSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ICardSetMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IEasinessFactorMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IIterator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ISerializer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IUserSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IUserSetMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CachingProvider\CachingProviderBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CachingProvider\GlobalCachingProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CachingProvider\IGlobalCachingProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Card.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CardExplorerNew.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CardMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CardSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CardSetLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CardSetMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CentralSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FakeData\FakeDataHolder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FakeData\StringRandomizer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\IdGenerator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LearnModel\EasinessFactorMaintainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LearnModel\enmAnswerQuality.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\LearnModel\Iterator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ObjectCloner.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\StringHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserSet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\UserSetMaintainer.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)DataModel\SampleData.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\LightGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\MediumGray.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\DarkGray.png" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\NavigationHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\RelayCommand.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\SuspensionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\ObservableDictionary.cs" />
+    <Content Include="$(MSBuildThisFileDirectory)_Divers\Default.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)_Divers\defaultData.xml" />
+    <Content Include="$(MSBuildThisFileDirectory)_Divers\Reqs.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)_Divers\Reqs_uitgevoerd.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)_Divers\SM-2_LearningModel.txt" />
+    <Content Include="$(MSBuildThisFileDirectory)_Divers\testData.xml" />
+    <PRIResource Include="$(MSBuildThisFileDirectory)Strings\en-US\Resources.resw" />
+  </ItemGroup>
+</Project>

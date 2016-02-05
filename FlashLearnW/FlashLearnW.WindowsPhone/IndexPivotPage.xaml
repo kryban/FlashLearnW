@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="FlashLearnW.IndexPivotPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlashLearnW"
+    xmlns:localViews="using:FlashLearnW.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="25"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Background="#FF363636" Orientation="Horizontal">
+            <TextBlock Text="FlashLearn" FontSize="25" Foreground="#FFA09E9E"/>
+            <TextBlock Width="10"/>
+            <TextBlock Text="Quick Learning" FontSize="12" Foreground="#FFA09E9E" VerticalAlignment="Top" Height="20" Margin="0,10,0,0" />
+        </StackPanel>
+
+        <Pivot Grid.Row="1" Margin="0,0,0,0">
+
+            <PivotItem Name="LearnPivotItem" Header="Learn" Margin="20,0,10,0">
+                <localViews:Learn_UserControl/>
+            </PivotItem>
+            
+            <PivotItem Name="MaintainPivotItem" Header="Maintain">
+                <local:TestUC/>
+            </PivotItem>
+            
+        </Pivot>
+
+    </Grid>
+</Page>

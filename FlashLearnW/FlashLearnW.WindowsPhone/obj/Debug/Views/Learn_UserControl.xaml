@@ -1,0 +1,114 @@
+﻿<UserControl
+    x:Class="FlashLearnW.Views.Learn_UserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FlashLearnW.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FF515151"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="Margin" Value="0,0,0,0" />
+            <Setter Property="Padding" Value="5" />
+            <Setter Property="UseLayoutRounding" Value="True"/>
+            <Setter Property="BorderThickness" Value="0" />
+        </Style>
+    </UserControl.Resources>
+
+    <!--<UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="WindowsPhone_ResourceDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>-->
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Question" FontSize="30" />
+            <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                     />
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <TextBlock Grid.Row="0" Text="Answer" FontSize="30" HorizontalAlignment="Left" Width="135" />
+                <Button Content="Show" HorizontalAlignment="Right" BorderThickness="0"/>
+            </Grid>
+            <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
+        
+        <Grid Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="0" Name="ButtonHolder0">
+                    <Button Content="BTN1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
+                            Width="{Binding ActualWidth, ElementName=ButtonHolder0}" />
+                </Grid>
+                <Grid Grid.Column="1" Name="ButtonHolder1">
+                    <Button Content="BTN2" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
+                            Width="{Binding ActualWidth, ElementName=ButtonHolder1}" />
+                </Grid>
+                <Grid Grid.Column="2" Name="ButtonHolder2">
+                    <Button Content="BTN3" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
+                            Width="{Binding ActualWidth, ElementName=ButtonHolder2}" />
+                </Grid>
+                <Grid Grid.Column="3" Name="ButtonHolder3">
+                    <Button Content="BTN4" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
+                            Width="{Binding ActualWidth, ElementName=ButtonHolder2}" />
+                </Grid>
+                <Grid Grid.Column="4" Name="ButtonHolder4">
+                    <Button Content="BTN5" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
+                            Width="{Binding ActualWidth, ElementName=ButtonHolder2}" />
+                </Grid>
+
+                <!--<Grid Grid.Column="0">
+                        <Button Content="BTN1" />
+                    </Grid>
+                    <Grid Grid.Column="0">
+                        <Button Content="BTN1" />
+                    </Grid>
+                    <Grid Grid.Column="0">
+                        <Button Content="BTN1" />
+                    </Grid>-->
+
+                </Grid>
+
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>
+
