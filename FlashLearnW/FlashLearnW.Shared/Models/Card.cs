@@ -79,7 +79,7 @@ namespace FlashLearnW.Models
             NumberOfIterations = 0;
             EasinessFactor = 1.1;
 			
-			ID = IdGenerator.Generate();
+			ID = IdGenerator.Generate("C");
         }
 
         public Card(string question, string answer, DateTime showDate)
@@ -92,7 +92,7 @@ namespace FlashLearnW.Models
             NumberOfIterations = 0;
             EasinessFactor = 1.1;
 
-			ID = IdGenerator.Generate();
+			ID = IdGenerator.Generate("C");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -12,6 +12,8 @@ namespace FlashLearnW.Models
     {
         // CardSet is a container to group a set of cards with the same relevance.
 
+        public string ID { get; private set; }
+
         private string name;
         public string Name
         {
@@ -37,6 +39,7 @@ namespace FlashLearnW.Models
 
         public CardSet(string name, string description)
         {
+            ID = IdGenerator.Generate("CS");
             Name = name;
             Description = description;
             Cards = new ObservableCollection<Card>();

@@ -11,7 +11,7 @@ namespace FlashLearnW.Models
     [JsonObject(MemberSerialization.OptOut)]
     public class UserSet : IUserSet, INotifyPropertyChanged
     {
-        public Guid ID { get; set; }
+        public string ID { get; private set; }
 
         public virtual ObservableCollection<CardSet> AllCardSets { get; set; }
 
@@ -35,7 +35,7 @@ namespace FlashLearnW.Models
         public UserSet()
         {
             AllCardSets = new ObservableCollection<CardSet>();
-            ID = new Guid();
+            ID = IdGenerator.Generate("US");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

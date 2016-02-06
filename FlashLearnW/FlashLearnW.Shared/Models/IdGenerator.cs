@@ -8,9 +8,9 @@ namespace FlashLearnW.Models
 		// an id must be unique throughout the whole cardset
 		// since a card can move from one set to another, it must be unique globally
 
-		public static string Generate()
+		public static string Generate(string preFill)
 		{
-            return Guid.NewGuid().ToString();
+            return preFill + Guid.NewGuid().ToString();
 		}
 	}
 }

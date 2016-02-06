@@ -7,7 +7,7 @@ namespace FlashLearnW.Interfaces
 {
     public interface IUserSet
     {
-        Guid ID { get; set; }
+        string ID { get; }
         ObservableCollection<CardSet> AllCardSets { get; set; }
         ICardSet CurrentCardSet { get; set; }
 		ICard CurrentCard { get; set; }
