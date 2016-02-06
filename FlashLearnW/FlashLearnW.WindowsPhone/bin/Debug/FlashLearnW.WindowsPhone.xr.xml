@@ -193,6 +193,5 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
-    <RootType FullName="FlashLearnW.Views.Start" />
   </Roots.RootTypes>
 </Roots>
