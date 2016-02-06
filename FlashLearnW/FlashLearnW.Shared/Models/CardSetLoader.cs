@@ -10,7 +10,7 @@ namespace FlashLearnW.Models
 
             UserSet userSet = app.AppWideUSerSet;
 
-            if (userSet.AllCardSets.Exists(x => x.Name == name))
+            if (userSet.AllCardSets.Where(x => x.Name == name).Count() > 0)
             {
                 return userSet.AllCardSets.FirstOrDefault(x => x.Name == name);
             }

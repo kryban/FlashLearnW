@@ -20,6 +20,8 @@ namespace FlashLearnW.Views
 {
     public sealed partial class Learn_UserControl : UserControl
     {
+
+
         public Learn_UserControl()
         {
             this.InitializeComponent();
@@ -27,6 +29,13 @@ namespace FlashLearnW.Views
             CardSet cardSet = CardSetLoader.LoadCardSetByName("default");
 
             Grid_Card.DataContext = cardSet.Cards.First();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // show answer
+            // update backing json with serilizer
+            // load next cad in prio list
         }
     }
 }

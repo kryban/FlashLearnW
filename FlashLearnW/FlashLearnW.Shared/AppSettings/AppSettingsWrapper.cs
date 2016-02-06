@@ -14,7 +14,7 @@ namespace FlashLearnW.AppSettings
 
         /// <summary>
         // some default settings are default beause they are required through the app
-        // so therefor, the default settings needs to be placed when they are not set yet
+        // therefor, the default settings needs to be placed when they are not set yet
         /// </summary>
         private void LoadDefaultSettingsAtFirstRun()
         {

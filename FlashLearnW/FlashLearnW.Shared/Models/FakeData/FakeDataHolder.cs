@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace FlashLearnW.Models.FakeData
 {
@@ -14,13 +15,13 @@ namespace FlashLearnW.Models.FakeData
 			loadedUserSet = new UserSet()
 			{
 				UserName = "Karoy",
-				AllCardSets = new List<CardSet>()
+				AllCardSets = new ObservableCollection<CardSet>()
 				{
 #region CardSet1
 					new CardSet("Karoy's kaartenset",
 									"Dit is een eerste kaartenset")
 					{
-						Cards = new List<Card>()
+						Cards = new ObservableCollection<Card>()
 						{ new Card(randomizer.RandomizeString(20, "s1"), randomizer.RandomizeString(20, "s1"))
 										 {ShowDate = DateTime.Today.AddDays(1), EasinessFactor = 1.5, NumberOfIterations = 2},
 						  new Card(randomizer.RandomizeString(10, "s1"), randomizer.RandomizeString(30, "s1"))
@@ -62,7 +63,7 @@ namespace FlashLearnW.Models.FakeData
 # region CardSet2
 					new CardSet("Een tweede kaartenset",
 									"Nog een set om een verzameling van sets te krijgen")
-					{	Cards = new List<Card>()
+					{	Cards = new ObservableCollection<Card>()
 						{ new Card(randomizer.RandomizeString(20, "s2"), randomizer.RandomizeString(20, "s2")) 
 										 {ShowDate = DateTime.Today.AddDays(1), EasinessFactor = 1.5, NumberOfIterations = 2},
 						  new Card(randomizer.RandomizeString(10, "s2"), randomizer.RandomizeString(30, "s2"))

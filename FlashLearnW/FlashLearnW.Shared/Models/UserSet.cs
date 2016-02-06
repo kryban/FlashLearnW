@@ -3,6 +3,7 @@
 using FlashLearnW.Interfaces;
 using Newtonsoft.Json;
 using System;
+using System.Collections.ObjectModel;
 
 namespace FlashLearnW.Models
 {
@@ -11,7 +12,7 @@ namespace FlashLearnW.Models
     {
         public Guid ID { get; set; }
 
-        public virtual List<CardSet> AllCardSets { get; set; }
+        public virtual ObservableCollection<CardSet> AllCardSets { get; set; }
 
         [JsonIgnore]
         public ICardSet CurrentCardSet { get; set; }
@@ -22,7 +23,7 @@ namespace FlashLearnW.Models
 
         public UserSet()
         {
-            AllCardSets = new List<CardSet>();
+            AllCardSets = new ObservableCollection<CardSet>();
             ID = new Guid();
         }
 		

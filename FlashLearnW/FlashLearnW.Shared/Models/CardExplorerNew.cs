@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Collections.ObjectModel;
+
 
 using FlashLearnW.Interfaces;
 
@@ -16,7 +18,7 @@ namespace FlashLearnW.Models
 
 			CardSet tmpSet = new CardSet(learnSetName, learnSetDescription);
 
-			tmpSet.Cards = cardSet.Cards.Where(x => x.ShowDate <= expectedLearnDay).ToList<Card>();
+			tmpSet.Cards = new ObservableCollection<Card>(cardSet.Cards.Where(x => x.ShowDate <= expectedLearnDay).ToList<Card>());
 
 			return tmpSet;
 		}

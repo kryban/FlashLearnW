@@ -44,7 +44,7 @@
             <TextBlock Grid.Row="0" Text="Question" FontSize="30" />
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
-                     Text="{Binding Question, Mode=OneWay}" />
+                     Text="{Binding Question, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
 
         <Grid Grid.Row="1">
@@ -55,11 +55,11 @@
 
             <Grid Grid.Row="0">
                 <TextBlock Grid.Row="0" Text="Answer" FontSize="30" HorizontalAlignment="Left" Width="135" />
-                <Button Content="Show" HorizontalAlignment="Right" BorderThickness="0"/>
+                <Button x:ConnectionId='1' Content="Show" HorizontalAlignment="Right" BorderThickness="0"                     />
             </Grid>
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
-                     Text="{Binding Answer, Mode=OneWay}" />
+                     Text="{Binding Answer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
         
         <Grid Grid.Row="2">

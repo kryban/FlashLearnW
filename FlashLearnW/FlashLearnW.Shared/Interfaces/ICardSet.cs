@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using FlashLearnW.Models;
+using System.Collections.ObjectModel;
 
 namespace FlashLearnW.Interfaces
 {
@@ -12,6 +13,6 @@ namespace FlashLearnW.Interfaces
     {
 		string Name { get; set; }
         string Description { get; set; }
-        List<Card> Cards { get; set; }
+        ObservableCollection<Card> Cards { get; set; }
     }
 }
