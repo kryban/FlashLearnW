@@ -28,7 +28,7 @@
         </ResourceDictionary>
     </UserControl.Resources>-->
 
-    <Grid>
+    <Grid Name="Grid_Card">
         <Grid.RowDefinitions>
             <RowDefinition Height="45*"/>
             <RowDefinition Height="45*"/>
@@ -43,8 +43,8 @@
 
             <TextBlock Grid.Row="0" Text="Question" FontSize="30" />
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
-                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-                     />
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
+                     Text="{Binding Question, Mode=OneWay}" />
         </Grid>
 
         <Grid Grid.Row="1">
@@ -58,7 +58,8 @@
                 <Button Content="Show" HorizontalAlignment="Right" BorderThickness="0"/>
             </Grid>
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
-                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+                     VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
+                     Text="{Binding Answer, Mode=OneWay}" />
         </Grid>
         
         <Grid Grid.Row="2">

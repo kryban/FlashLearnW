@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlashLearnW.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,10 @@ namespace FlashLearnW.Views
         public Learn_UserControl()
         {
             this.InitializeComponent();
+
+            CardSet cardSet = CardSetLoader.LoadCardSetByName("default");
+
+            Grid_Card.DataContext = cardSet.Cards.First();
         }
     }
 }

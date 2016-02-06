@@ -11,6 +11,8 @@
     <RootPropertyPathName Name="Group" />
     <RootPropertyPathName Name="Item" />
     <RootPropertyPathName Name="ActualWidth" />
+    <RootPropertyPathName Name="Answer" />
+    <RootPropertyPathName Name="Question" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -24,6 +26,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="RelativeSource" />
       <RootProperty Name="ElementName" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.RelativeSource" />
     <RootType FullName="Windows.UI.Xaml.ResourceDictionary">
@@ -192,6 +195,8 @@
       <RootProperty Name="BorderThickness" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Text" />
     </RootType>
   </Roots.RootTypes>
 </Roots>
