@@ -1,21 +1,68 @@
 ﻿using FlashLearnW.Interfaces;
 using System;
+using System.ComponentModel;
 
 namespace FlashLearnW.Models
 {
-    public class Card : ICard
+    public class Card : ICard, INotifyPropertyChanged
     {
 		public string ID { get; set; }
-		
-		public string Question { get; set; }
-        public string Answer { get; set; }
+
+        private string question;
+        public string Question
+        {
+            get { return question; }
+            set
+            {
+                question = value;
+                NotifyPropertyChanged("Question");
+            }
+        }
+
+        private string answer;
+        public string Answer
+        {
+            get { return answer; }
+            set
+            {
+                answer = value;
+                NotifyPropertyChanged("Answer");
+            }
+        }
 
         // most difficults = 1.1 and most easy = 2.5
-        public double EasinessFactor { get; set; }
+        private double easinessFactor;
+        public double EasinessFactor
+        {
+            get { return easinessFactor; }
+            set
+            {
+                easinessFactor = value;
+                NotifyPropertyChanged("EasinessFactor");
+            }
+        }
 
-        public int NumberOfIterations { get; set; }
+        private int numberOfIterations;
+        public int NumberOfIterations
+        {
+            get { return NumberOfIterations; }
+            set
+            {
+                numberOfIterations = value;
+                NotifyPropertyChanged("NumberOfIterations");
+            }
+        }
 
-        public DateTime ShowDate { get; set; }
+        private DateTime showDate;
+        public DateTime ShowDate
+        {
+            get { return showDate; }
+            set
+            {
+                showDate = value;
+                NotifyPropertyChanged("showDate");
+            }
+        }
 
         public Card()
         {
@@ -48,5 +95,15 @@ namespace FlashLearnW.Models
 			ID = IdGenerator.Generate();
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void NotifyPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this,
+                    new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
 }
