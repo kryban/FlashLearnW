@@ -95,12 +95,12 @@ namespace FlashLearnW
         /// <param name="e">Event data that describes the item clicked.</param>
         private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
-            var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
-            if (!Frame.Navigate(typeof(ItemPage), itemId))
-            {
-                var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
-                throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
-            }
+            //var itemId = ((SampleDataItem)e.ClickedItem).UniqueId;
+            //if (!Frame.Navigate(typeof(ItemPage), itemId))
+            //{
+            //    var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
+            //    throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
+            //}
         }
 
         #region NavigationHelper registration

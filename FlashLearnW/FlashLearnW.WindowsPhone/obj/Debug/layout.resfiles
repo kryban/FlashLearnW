@@ -18,11 +18,8 @@ Assets\StoreLogo.scale-240.png
 Assets\WideLogo.scale-240.png
 App.xbf
 FlashLearnW.WindowsPhone.xr.xml
-HubPage.xbf
 IndexPivotPage.xbf
-ItemPage.xbf
 SectionPage.xbf
-StartPage.xbf
-TestUC.xbf
 Views\Learn_UserControl.xbf
+Views\Maintain_UserControl.xbf
 StoreManifest.xml

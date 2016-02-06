@@ -80,9 +80,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="HubPage.xaml.cs">
-      <DependentUpon>HubPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="IndexPivotPage.xaml.cs">
       <DependentUpon>IndexPivotPage.xaml</DependentUpon>
     </Compile>
@@ -90,14 +87,8 @@
     <Compile Include="SectionPage.xaml.cs">
       <DependentUpon>SectionPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ItemPage.xaml.cs">
-      <DependentUpon>ItemPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="StartPage.xaml.cs">
-      <DependentUpon>StartPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="TestUC.xaml.cs">
-      <DependentUpon>TestUC.xaml</DependentUpon>
+    <Compile Include="Views\Maintain_UserControl.xaml.cs">
+      <DependentUpon>Maintain_UserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Learn_UserControl.xaml.cs">
       <DependentUpon>Learn_UserControl.xaml</DependentUpon>
@@ -120,10 +111,6 @@
     <Content Include="StoreManifest.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="HubPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="IndexPivotPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -132,15 +119,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ItemPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="StartPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TestUC.xaml">
+    <Page Include="Views\Maintain_UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

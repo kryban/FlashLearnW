@@ -93,23 +93,14 @@
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\HubPage.xbf">
-      <PackagePath>HubPage.xbf</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\IndexPivotPage.xbf">
       <PackagePath>IndexPivotPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\ItemPage.xbf">
-      <PackagePath>ItemPage.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\StartPage.xbf">
-      <PackagePath>StartPage.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\TestUC.xbf">
-      <PackagePath>TestUC.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\Views\Maintain_UserControl.xbf">
+      <PackagePath>Views\Maintain_UserControl.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\Views\Learn_UserControl.xbf">
       <PackagePath>Views\Learn_UserControl.xbf</PackagePath>

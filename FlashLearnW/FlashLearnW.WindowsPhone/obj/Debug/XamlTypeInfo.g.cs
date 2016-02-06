@@ -124,37 +124,31 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[14];
-            _typeNameTable[0] = "FlashLearnW.HubPage";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "FlashLearnW.Models.NavigationHelper";
-            _typeNameTable[4] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[5] = "FlashLearnW.Models.ObservableDictionary";
-            _typeNameTable[6] = "Object";
-            _typeNameTable[7] = "String";
-            _typeNameTable[8] = "FlashLearnW.TestUC";
-            _typeNameTable[9] = "FlashLearnW.Views.Learn_UserControl";
-            _typeNameTable[10] = "FlashLearnW.IndexPivotPage";
-            _typeNameTable[11] = "FlashLearnW.SectionPage";
-            _typeNameTable[12] = "FlashLearnW.ItemPage";
-            _typeNameTable[13] = "FlashLearnW.StartPage";
+            _typeNameTable = new string[11];
+            _typeNameTable[0] = "FlashLearnW.Views.Maintain_UserControl";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[2] = "FlashLearnW.Views.Learn_UserControl";
+            _typeNameTable[3] = "FlashLearnW.IndexPivotPage";
+            _typeNameTable[4] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[5] = "FlashLearnW.SectionPage";
+            _typeNameTable[6] = "FlashLearnW.Models.NavigationHelper";
+            _typeNameTable[7] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[8] = "FlashLearnW.Models.ObservableDictionary";
+            _typeNameTable[9] = "Object";
+            _typeNameTable[10] = "String";
 
-            _typeTable = new global::System.Type[14];
-            _typeTable[0] = typeof(global::FlashLearnW.HubPage);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::FlashLearnW.Models.NavigationHelper);
-            _typeTable[4] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[5] = typeof(global::FlashLearnW.Models.ObservableDictionary);
-            _typeTable[6] = typeof(global::System.Object);
-            _typeTable[7] = typeof(global::System.String);
-            _typeTable[8] = typeof(global::FlashLearnW.TestUC);
-            _typeTable[9] = typeof(global::FlashLearnW.Views.Learn_UserControl);
-            _typeTable[10] = typeof(global::FlashLearnW.IndexPivotPage);
-            _typeTable[11] = typeof(global::FlashLearnW.SectionPage);
-            _typeTable[12] = typeof(global::FlashLearnW.ItemPage);
-            _typeTable[13] = typeof(global::FlashLearnW.StartPage);
+            _typeTable = new global::System.Type[11];
+            _typeTable[0] = typeof(global::FlashLearnW.Views.Maintain_UserControl);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[2] = typeof(global::FlashLearnW.Views.Learn_UserControl);
+            _typeTable[3] = typeof(global::FlashLearnW.IndexPivotPage);
+            _typeTable[4] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[5] = typeof(global::FlashLearnW.SectionPage);
+            _typeTable[6] = typeof(global::FlashLearnW.Models.NavigationHelper);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[8] = typeof(global::FlashLearnW.Models.ObservableDictionary);
+            _typeTable[9] = typeof(global::System.Object);
+            _typeTable[10] = typeof(global::System.String);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -189,15 +183,12 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_HubPage() { return new global::FlashLearnW.HubPage(); }
-        private object Activate_5_ObservableDictionary() { return new global::FlashLearnW.Models.ObservableDictionary(); }
-        private object Activate_8_TestUC() { return new global::FlashLearnW.TestUC(); }
-        private object Activate_9_Learn_UserControl() { return new global::FlashLearnW.Views.Learn_UserControl(); }
-        private object Activate_10_IndexPivotPage() { return new global::FlashLearnW.IndexPivotPage(); }
-        private object Activate_11_SectionPage() { return new global::FlashLearnW.SectionPage(); }
-        private object Activate_12_ItemPage() { return new global::FlashLearnW.ItemPage(); }
-        private object Activate_13_StartPage() { return new global::FlashLearnW.StartPage(); }
-        private void MapAdd_5_ObservableDictionary(object instance, object key, object item)
+        private object Activate_0_Maintain_UserControl() { return new global::FlashLearnW.Views.Maintain_UserControl(); }
+        private object Activate_2_Learn_UserControl() { return new global::FlashLearnW.Views.Learn_UserControl(); }
+        private object Activate_3_IndexPivotPage() { return new global::FlashLearnW.IndexPivotPage(); }
+        private object Activate_5_SectionPage() { return new global::FlashLearnW.SectionPage(); }
+        private object Activate_8_ObservableDictionary() { return new global::FlashLearnW.Models.ObservableDictionary(); }
+        private void MapAdd_8_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -215,128 +206,83 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  FlashLearnW.HubPage
+            case 0:   //  FlashLearnW.Views.Maintain_UserControl
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_0_Maintain_UserControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 1:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 2:   //  FlashLearnW.Views.Learn_UserControl
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_2_Learn_UserControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 3:   //  FlashLearnW.IndexPivotPage
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_HubPage;
+                userType.Activator = Activate_3_IndexPivotPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 5:   //  FlashLearnW.SectionPage
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_SectionPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 2:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 3:   //  FlashLearnW.Models.NavigationHelper
+            case 6:   //  FlashLearnW.Models.NavigationHelper
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  Windows.UI.Xaml.DependencyObject
+            case 7:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 5:   //  FlashLearnW.Models.ObservableDictionary
+            case 8:   //  FlashLearnW.Models.ObservableDictionary
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_5_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_8_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Object
+            case 9:   //  Object
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  String
+            case 10:   //  String
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  FlashLearnW.TestUC
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_8_TestUC;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 9:   //  FlashLearnW.Views.Learn_UserControl
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_9_Learn_UserControl;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 10:   //  FlashLearnW.IndexPivotPage
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_IndexPivotPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 11:   //  FlashLearnW.SectionPage
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_SectionPage;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 12:   //  FlashLearnW.ItemPage
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_ItemPage;
-                userType.AddMemberName("NavigationHelper");
-                userType.AddMemberName("DefaultViewModel");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 13:   //  FlashLearnW.StartPage
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_StartPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
                 break;
             }
             return xamlType;
         }
 
 
-        private object get_0_HubPage_NavigationHelper(object instance)
-        {
-            var that = (global::FlashLearnW.HubPage)instance;
-            return that.NavigationHelper;
-        }
-        private object get_1_HubPage_DefaultViewModel(object instance)
-        {
-            var that = (global::FlashLearnW.HubPage)instance;
-            return that.DefaultViewModel;
-        }
-        private object get_2_SectionPage_NavigationHelper(object instance)
+        private object get_0_SectionPage_NavigationHelper(object instance)
         {
             var that = (global::FlashLearnW.SectionPage)instance;
             return that.NavigationHelper;
         }
-        private object get_3_SectionPage_DefaultViewModel(object instance)
+        private object get_1_SectionPage_DefaultViewModel(object instance)
         {
             var that = (global::FlashLearnW.SectionPage)instance;
-            return that.DefaultViewModel;
-        }
-        private object get_4_ItemPage_NavigationHelper(object instance)
-        {
-            var that = (global::FlashLearnW.ItemPage)instance;
-            return that.NavigationHelper;
-        }
-        private object get_5_ItemPage_DefaultViewModel(object instance)
-        {
-            var that = (global::FlashLearnW.ItemPage)instance;
             return that.DefaultViewModel;
         }
 
@@ -347,40 +293,16 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
 
             switch (longMemberName)
             {
-            case "FlashLearnW.HubPage.NavigationHelper":
-                userType = (global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FlashLearnW.HubPage");
-                xamlMember = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "FlashLearnW.Models.NavigationHelper");
-                xamlMember.Getter = get_0_HubPage_NavigationHelper;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "FlashLearnW.HubPage.DefaultViewModel":
-                userType = (global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FlashLearnW.HubPage");
-                xamlMember = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "FlashLearnW.Models.ObservableDictionary");
-                xamlMember.Getter = get_1_HubPage_DefaultViewModel;
-                xamlMember.SetIsReadOnly();
-                break;
             case "FlashLearnW.SectionPage.NavigationHelper":
                 userType = (global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FlashLearnW.SectionPage");
                 xamlMember = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "FlashLearnW.Models.NavigationHelper");
-                xamlMember.Getter = get_2_SectionPage_NavigationHelper;
+                xamlMember.Getter = get_0_SectionPage_NavigationHelper;
                 xamlMember.SetIsReadOnly();
                 break;
             case "FlashLearnW.SectionPage.DefaultViewModel":
                 userType = (global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FlashLearnW.SectionPage");
                 xamlMember = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "FlashLearnW.Models.ObservableDictionary");
-                xamlMember.Getter = get_3_SectionPage_DefaultViewModel;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "FlashLearnW.ItemPage.NavigationHelper":
-                userType = (global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FlashLearnW.ItemPage");
-                xamlMember = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlMember(this, "NavigationHelper", "FlashLearnW.Models.NavigationHelper");
-                xamlMember.Getter = get_4_ItemPage_NavigationHelper;
-                xamlMember.SetIsReadOnly();
-                break;
-            case "FlashLearnW.ItemPage.DefaultViewModel":
-                userType = (global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType)GetXamlTypeByName("FlashLearnW.ItemPage");
-                xamlMember = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlMember(this, "DefaultViewModel", "FlashLearnW.Models.ObservableDictionary");
-                xamlMember.Getter = get_5_ItemPage_DefaultViewModel;
+                xamlMember.Getter = get_1_SectionPage_DefaultViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }
