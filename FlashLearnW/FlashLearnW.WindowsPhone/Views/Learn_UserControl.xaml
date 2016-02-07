@@ -66,49 +66,38 @@
         </Grid>
         
         <Grid Grid.Row="2">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
-                        <ColumnDefinition Width="2*"/>
-                    </Grid.ColumnDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
 
 
-                <Grid Grid.Column="0" Name="ButtonHolder0">
-                    <Button Content="BTN1" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
-                            Width="{Binding ActualWidth, ElementName=ButtonHolder0}" />
+                <Grid Grid.Column="0" Name="Perfect_Button_Grid">
+                    <Button Content="Perfect" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
+                            Name="Perfect_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder0}" Click="Button_Click"/>
                 </Grid>
-                <Grid Grid.Column="1" Name="ButtonHolder1">
-                    <Button Content="BTN2" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
-                            Width="{Binding ActualWidth, ElementName=ButtonHolder1}" />
+                <Grid Grid.Column="1" Name="Easy_Button_Grid">
+                    <Button Content="Easy" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
+                            Name="Easy_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder1}" Click="Button_Click" />
                 </Grid>
-                <Grid Grid.Column="2" Name="ButtonHolder2">
-                    <Button Content="BTN3" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
-                            Width="{Binding ActualWidth, ElementName=ButtonHolder2}" />
+                <Grid Grid.Column="2" Name="Difficult_Button_Grid">
+                    <Button Content="Difficult" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
+                            Name="Difficult_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" Click="Button_Click"/>
                 </Grid>
-                <Grid Grid.Column="3" Name="ButtonHolder3">
-                    <Button Content="BTN4" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
-                            Width="{Binding ActualWidth, ElementName=ButtonHolder2}" />
+                <Grid Grid.Column="3" Name="Wrong_Button_Grid">
+                    <Button Content="Wrong" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
+                            Name="Wrong_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" Click="Button_Click"/>
                 </Grid>
-                <Grid Grid.Column="4" Name="ButtonHolder4">
-                    <Button Content="BTN5" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
-                            Width="{Binding ActualWidth, ElementName=ButtonHolder2}" />
-                </Grid>
-
-                <!--<Grid Grid.Column="0">
-                        <Button Content="BTN1" />
-                    </Grid>
-                    <Grid Grid.Column="0">
-                        <Button Content="BTN1" />
-                    </Grid>
-                    <Grid Grid.Column="0">
-                        <Button Content="BTN1" />
-                    </Grid>-->
-
+                <Grid Grid.Column="4" Name="Blackout_Button_Grid">
+                    <Button Content="Blackout" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" 
+                            Name="Blackout_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" Click="Button_Click" />
                 </Grid>
 
+            </Grid>
 
         </Grid>
 

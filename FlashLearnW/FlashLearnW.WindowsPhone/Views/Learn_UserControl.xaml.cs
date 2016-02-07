@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FlashLearnW.Models.LearnModel;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -48,6 +49,32 @@ namespace FlashLearnW.Views
             {
                 ShowAnswer_Button.Content = "Show";
                 Answer_TextBox.Text = "";
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button clickedButton = sender as Button;
+
+            switch (clickedButton.Name)
+            {
+                case "Perfect":
+                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Perfect);
+                    break;
+                case "Easy":
+                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Hesitation);
+                    break;
+                case "Difficult":
+                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Difficult);
+                    break;
+                case "Wrong":
+                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.IncorrectButRemebered);
+                    break;
+                case "Blackout":
+                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Blackout);
+                    break;
+                default:
+                    break;
             }
         }
     }

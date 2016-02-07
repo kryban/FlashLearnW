@@ -96,7 +96,7 @@ namespace FlashLearnW.Models
 			currentUserSet.CurrentCardSet = currentUserSet.AllCardSets.First();
 		}
 
-        public void setCurrentCardSet(IUserSet userSet, ICardSet cardSet)
+        public void setCurrentCardSet(UserSet userSet, ICardSet cardSet)
         {
             userSet.CurrentCardSet = cardSet;
         }
