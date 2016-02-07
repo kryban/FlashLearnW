@@ -11,7 +11,7 @@ namespace FlashLearnW.Models
         private string question;
         public string Question
         {
-            get { return question; }
+            get { return question +"//ID: "+ ID; }
             set
             {
                 question = value;
@@ -79,7 +79,7 @@ namespace FlashLearnW.Models
             NumberOfIterations = 0;
             EasinessFactor = 1.1;
 			
-			ID = IdGenerator.Generate("C");
+			ID = IdGenerator.Generate("C_");
         }
 
         public Card(string question, string answer, DateTime showDate)

@@ -44,7 +44,8 @@
             <TextBlock Grid.Row="0" Text="Question" FontSize="30" />
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
-                     Text="{Binding Question, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                     Text="{Binding Question, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                     TextWrapping="Wrap" />
         </Grid>
 
         <Grid Grid.Row="1">

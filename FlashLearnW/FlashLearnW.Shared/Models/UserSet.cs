@@ -35,7 +35,7 @@ namespace FlashLearnW.Models
         public UserSet()
         {
             AllCardSets = new ObservableCollection<CardSet>();
-            ID = IdGenerator.Generate("US");
+            ID = IdGenerator.Generate("US_");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

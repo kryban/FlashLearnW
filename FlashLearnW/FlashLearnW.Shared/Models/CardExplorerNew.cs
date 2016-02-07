@@ -14,7 +14,7 @@ namespace FlashLearnW.Models
 		{
 			string learnSetName = cardSet.Name;
 			string learnSetDescription = "This is the set of cards which are composed te be shown on " +
-											String.Format("{0:D}", expectedLearnDay);
+											String.Format("{0:D}", expectedLearnDay) + ".";
 
 			CardSet tmpSet = new CardSet(learnSetName, learnSetDescription);
 
@@ -23,14 +23,9 @@ namespace FlashLearnW.Models
 			return tmpSet;
 		}
 
-		public List<Card> FilterLearnSet(ICardSet CardSet, DateTime expectedLearnDay)
+		public ObservableCollection<Card> FilterLearnSet(ICardSet CardSet, DateTime expectedLearnDay)
 		{
-			return CardSet.Cards.Where(x => x.ShowDate <= expectedLearnDay).ToList<Card>();
-		}
-
-		public void setCurrentCardSet(IUserSet userSet, ICardSet cardSet)
-		{
-			userSet.CurrentCardSet = cardSet;
+			return new ObservableCollection<Card>(CardSet.Cards.Where(x => x.ShowDate <= expectedLearnDay).ToList<Card>());
 		}
 
 		public void ProcessResponse(IUserSet currentUserSet, int answerQuality)
@@ -89,7 +84,7 @@ namespace FlashLearnW.Models
 			}
 		}
 
-		public void SetCurrentCardSet(IUserSet currentUserSet, string cardSetName = null)
+		public void setCurrentCardSet(IUserSet currentUserSet, string cardSetName = null)
 		{
 			if (cardSetName != null)
 			{
@@ -100,5 +95,10 @@ namespace FlashLearnW.Models
 
 			currentUserSet.CurrentCardSet = currentUserSet.AllCardSets.First();
 		}
-	}
+
+        public void setCurrentCardSet(IUserSet userSet, ICardSet cardSet)
+        {
+            userSet.CurrentCardSet = cardSet;
+        }
+    }
 }

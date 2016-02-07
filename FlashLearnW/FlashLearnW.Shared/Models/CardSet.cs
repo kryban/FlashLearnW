@@ -39,7 +39,7 @@ namespace FlashLearnW.Models
 
         public CardSet(string name, string description)
         {
-            ID = IdGenerator.Generate("CS");
+            ID = IdGenerator.Generate("CS_");
             Name = name;
             Description = description;
             Cards = new ObservableCollection<Card>();

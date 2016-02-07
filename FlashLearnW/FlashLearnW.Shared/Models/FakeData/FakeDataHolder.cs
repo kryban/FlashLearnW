@@ -88,6 +88,9 @@ namespace FlashLearnW.Models.FakeData
 				}
 			};
 
+            loadedUserSet.CurrentCardSet = loadedUserSet.AllCardSets[0];
+            loadedUserSet.CurrentCard = loadedUserSet.CurrentCardSet.Cards[0];
+
 //          string pathToSerialize = new AppSettings.AppSettingsWrapper().
 //			new Serializer().Serialize(Convert.ToString(ConfigurationManager.AppSettings["UserSetPath"]), loadedUserSet); 
 		}

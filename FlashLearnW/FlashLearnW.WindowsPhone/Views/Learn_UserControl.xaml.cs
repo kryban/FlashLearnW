@@ -26,9 +26,16 @@ namespace FlashLearnW.Views
         {
             this.InitializeComponent();
 
-            CardSet cardSet = CardSetLoader.LoadCardSetByName("default");
+            App app = App.Current as App;
 
-            Grid_Card.DataContext = cardSet.Cards.First();
+            CardExplorerNew cardExplorer = new CardExplorerNew();
+
+            CardSet cardSet = CardSetLoader.LoadCardSetByName("FirstTime");
+            CardSet learnSet = cardExplorer.ComposeToLearnCardSet(cardSet, DateTime.Today);
+
+            cardExplorer.setCurrentCardSet(app.AppWideUSerSet, learnSet);
+
+            Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
