@@ -39,7 +39,16 @@ namespace FlashLearnW.Views
 
         private void ShowAnswer_Button_Click(object sender, RoutedEventArgs e)
         {
-            Answer_TextBox.Text = app.AppWideUSerSet.CurrentCard.Answer;
+            if (Answer_TextBox.Text.Length == 0)
+            {
+                ShowAnswer_Button.Content = "Hide";
+                Answer_TextBox.Text = app.AppWideUSerSet.CurrentCard.Answer;
+            }
+            else
+            {
+                ShowAnswer_Button.Content = "Show";
+                Answer_TextBox.Text = "";
+            }
         }
     }
 }

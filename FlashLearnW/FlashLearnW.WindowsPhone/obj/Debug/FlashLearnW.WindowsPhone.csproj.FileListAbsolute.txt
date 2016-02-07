@@ -48,4 +48,3 @@ C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsP
 C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\Views\Maintain_UserControl.xbf
 C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\Views\Maintain_UserControl.xaml
 C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\Views\Maintain_UserControl.xbf
-C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\FlashLearnW.WindowsPhone.csprojResolveAssemblyReference.cache
