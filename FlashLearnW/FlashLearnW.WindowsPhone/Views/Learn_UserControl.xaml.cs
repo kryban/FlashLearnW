@@ -20,13 +20,11 @@ namespace FlashLearnW.Views
 {
     public sealed partial class Learn_UserControl : UserControl
     {
-
+        private App app = App.Current as App;
 
         public Learn_UserControl()
         {
             this.InitializeComponent();
-
-            App app = App.Current as App;
 
             CardExplorerNew cardExplorer = new CardExplorerNew();
 
@@ -36,13 +34,12 @@ namespace FlashLearnW.Views
             cardExplorer.setCurrentCardSet(app.AppWideUSerSet, learnSet);
 
             Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
+            Answer_TextBox.DataContext = "";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ShowAnswer_Button_Click(object sender, RoutedEventArgs e)
         {
-            // show answer
-            // update backing json with serilizer
-            // load next cad in prio list
+            Answer_TextBox.Text = app.AppWideUSerSet.CurrentCard.Answer;
         }
     }
 }
