@@ -58,20 +58,26 @@ namespace FlashLearnW.Views
 
             switch (clickedButton.Name)
             {
-                case "Perfect":
+                case "Perfect_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Perfect);
+                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
-                case "Easy":
+
+                case "Easy_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Hesitation);
+                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
-                case "Difficult":
+                case "Difficult_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Difficult);
+                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
-                case "Wrong":
+                case "Wrong_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.IncorrectButRemebered);
+                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
-                case "Blackout":
+                case "Blackout_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Blackout);
+                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
                 default:
                     break;

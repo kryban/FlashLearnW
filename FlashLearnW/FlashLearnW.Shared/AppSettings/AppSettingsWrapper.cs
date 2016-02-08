@@ -9,14 +9,14 @@ namespace FlashLearnW.AppSettings
 
         public AppSettingsWrapper()
         {
-            LoadDefaultSettingsAtFirstRun();
+            //LoadDefaultSettingsAtFirstRun();
         }
 
         /// <summary>
         // some default settings are default beause they are required through the app
         // therefor, the default settings needs to be placed when they are not set yet
         /// </summary>
-        private void LoadDefaultSettingsAtFirstRun()
+        private static void LoadDefaultSettingsAtFirstRun()
         {
             var defaultSettings = new DefaultSettings().DefaultSettingsDictionary;
 
@@ -28,7 +28,9 @@ namespace FlashLearnW.AppSettings
                     continue;
                 }
 
-                if (appSettings.Values[setting.Key] == null || appSettings.Values[setting.Key].ToString() == String.Empty)
+                string foo = appSettings.Values[setting.Key].ToString();
+
+                if (appSettings.Values[setting.Key] == null || appSettings.Values[setting.Key] == string.Empty)
                 {
                     appSettings.Values.Add(setting.Key, setting.Value);
                 }
@@ -37,7 +39,9 @@ namespace FlashLearnW.AppSettings
 
         public static string GetSetting(string settingName)
         {
-            if(appSettings.Values.ContainsKey(settingName))
+            LoadDefaultSettingsAtFirstRun();
+
+            if (appSettings.Values.ContainsKey(settingName))
             {
                 return appSettings.Values[settingName].ToString();
             }

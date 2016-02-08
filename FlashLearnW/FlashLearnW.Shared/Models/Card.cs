@@ -45,7 +45,7 @@ namespace FlashLearnW.Models
         private int numberOfIterations;
         public int NumberOfIterations
         {
-            get { return NumberOfIterations; }
+            get { return numberOfIterations; }
             set
             {
                 numberOfIterations = value;

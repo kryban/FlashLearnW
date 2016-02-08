@@ -12,7 +12,8 @@ namespace FlashLearnW.Models.LearnModel
     {
         private int providedAnswerQuality { get; set; }
         private double currentEF { get; set; }
-        private double minimumEasinessFactor = Convert.ToDouble(AppSettings.AppSettingsWrapper.GetSetting(AppSettings.AppSettingsKeyNames.MinimumEasinessFactor));
+        private static string foo = AppSettings.AppSettingsWrapper.GetSetting(AppSettings.AppSettingsKeyNames.MinimumEasinessFactor);
+        private double minimumEasinessFactor = Convert.ToDouble(foo);
 
         public EasinessFactorMaintainer(int answerQuality, double currentEF)
         {
