@@ -22,4 +22,5 @@ IndexPivotPage.xbf
 SectionPage.xbf
 Views\Learn_UserControl.xbf
 Views\Maintain_UserControl.xbf
+Views\Overview_UserControl.xbf
 StoreManifest.xml

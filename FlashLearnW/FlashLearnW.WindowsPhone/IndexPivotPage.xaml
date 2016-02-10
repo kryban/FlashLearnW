@@ -23,13 +23,21 @@
 
         <Pivot Grid.Row="1" Margin="0,0,0,0">
 
+            <PivotItem Name="OverviewPivotItem" Header="Overview">
+                <localViews:Overview_UserControl/>
+            </PivotItem>
+            
             <PivotItem Name="LearnPivotItem" Header="Learn" Margin="20,0,10,0">
-                <localViews:Learn_UserControl />
+                <localViews:Learn_UserControl/>
             </PivotItem>
             
             <PivotItem Name="MaintainPivotItem" Header="Maintain">
                 <localViews:Maintain_UserControl/>
             </PivotItem>
+
+            <PivotItem Name="OptionsPivotItem" Header="Options">
+                <TextBlock Text="Settings for the app"/>
+            </PivotItem> 
             
         </Pivot>
 

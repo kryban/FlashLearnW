@@ -105,6 +105,9 @@
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\Views\Learn_UserControl.xbf">
       <PackagePath>Views\Learn_UserControl.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\Views\Overview_UserControl.xbf">
+      <PackagePath>Views\Overview_UserControl.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>

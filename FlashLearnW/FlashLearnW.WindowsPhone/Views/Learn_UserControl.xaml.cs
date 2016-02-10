@@ -60,28 +60,24 @@ namespace FlashLearnW.Views
             {
                 case "Perfect_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Perfect);
-                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
-
                 case "Easy_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Hesitation);
-                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
                 case "Difficult_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Difficult);
-                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
                 case "Wrong_Button":
                     new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.IncorrectButRemebered);
-                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
                     break;
                 case "Blackout_Button":
-                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Blackout);
-                    Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
+                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Blackout);                  
                     break;
                 default:
                     break;
             }
+
+            Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
         }
     }
 }

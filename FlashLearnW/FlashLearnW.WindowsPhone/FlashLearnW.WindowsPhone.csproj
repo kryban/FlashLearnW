@@ -93,6 +93,9 @@
     <Compile Include="Views\Learn_UserControl.xaml.cs">
       <DependentUpon>Learn_UserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Overview_UserControl.xaml.cs">
+      <DependentUpon>Overview_UserControl.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -124,6 +127,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Learn_UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Overview_UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
