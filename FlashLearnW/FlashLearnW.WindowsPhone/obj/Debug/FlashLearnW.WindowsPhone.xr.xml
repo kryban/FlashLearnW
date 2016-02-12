@@ -11,6 +11,8 @@
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="Answer" />
     <RootPropertyPathName Name="Question" />
+    <RootPropertyPathName Name="AllCardSets" />
+    <RootPropertyPathName Name="Name" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -157,5 +159,6 @@
       <RootProperty Name="Text" />
       <RootProperty Name="TextWrapping" />
     </RootType>
+    <RootType FullName="FlashLearnW.Views.OverviewDetail_Page" />
   </Roots.RootTypes>
 </Roots>

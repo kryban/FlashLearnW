@@ -34,9 +34,11 @@ namespace FlashLearnW
 #endif
 
         private UserSet appWideUserSet;
-        public UserSet AppWideUSerSet { get { return appWideUserSet; } }
+        public UserSet AppWideUserSet { get { return appWideUserSet; } }
 
         //public static string TestProp { get { return "Test App global var"; } }
+
+        public static Frame RootFrame;
 
         /// <summary>
         /// Initializes the singleton instance of the <see cref="App"/> class. This is the first line of authored code
@@ -69,20 +71,20 @@ namespace FlashLearnW
             }
 #endif
 
-            Frame rootFrame = Window.Current.Content as Frame;
+            RootFrame = Window.Current.Content as Frame;
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-            if (rootFrame == null)
+            if (RootFrame == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
-                rootFrame = new Frame();
+                RootFrame = new Frame();
 
                 //Associate the frame with a SuspensionManager key                                
-                SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
+                SuspensionManager.RegisterFrame(RootFrame, "AppFrame");
 
                 // TODO: change this value to a cache size that is appropriate for your application
-                rootFrame.CacheSize = 1;
+                RootFrame.CacheSize = 1;
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
@@ -99,30 +101,30 @@ namespace FlashLearnW
                 }
 
                 // Place the frame in the current Window
-                Window.Current.Content = rootFrame;
+                Window.Current.Content = RootFrame;
             }
 
-            if (rootFrame.Content == null)
+            if (RootFrame.Content == null)
             {
 #if WINDOWS_PHONE_APP
                 // Removes the turnstile navigation for startup.
-                if (rootFrame.ContentTransitions != null)
+                if (RootFrame.ContentTransitions != null)
                 {
                     this.transitions = new TransitionCollection();
-                    foreach (var c in rootFrame.ContentTransitions)
+                    foreach (var c in RootFrame.ContentTransitions)
                     {
                         this.transitions.Add(c);
                     }
                 }
 
-                rootFrame.ContentTransitions = null;
-                rootFrame.Navigated += this.RootFrame_FirstNavigated;
+                RootFrame.ContentTransitions = null;
+                RootFrame.Navigated += this.RootFrame_FirstNavigated;
 #endif
 
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                if (!rootFrame.Navigate(typeof(IndexPivotPage), e.Arguments))
+                if (!RootFrame.Navigate(typeof(IndexPivotPage), e.Arguments))
                 {
                     throw new Exception("Failed to create initial page");
                 }

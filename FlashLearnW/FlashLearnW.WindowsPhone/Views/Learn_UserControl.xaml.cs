@@ -32,9 +32,9 @@ namespace FlashLearnW.Views
             CardSet cardSet = CardSetLoader.LoadCardSetByName("FirstTime");
             CardSet learnSet = cardExplorer.ComposeToLearnCardSet(cardSet, DateTime.Today);
 
-            cardExplorer.setCurrentCardSet(app.AppWideUSerSet, learnSet);
+            cardExplorer.setCurrentCardSet(app.AppWideUserSet, learnSet);
 
-            Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
+            Grid_Card.DataContext = app.AppWideUserSet.CurrentCard;
             Answer_TextBox.DataContext = "";
         }
 
@@ -43,7 +43,7 @@ namespace FlashLearnW.Views
             if (Answer_TextBox.Text.Length == 0)
             {
                 ShowAnswer_Button.Content = "Hide";
-                Answer_TextBox.Text = app.AppWideUSerSet.CurrentCard.Answer;
+                Answer_TextBox.Text = app.AppWideUserSet.CurrentCard.Answer;
             }
             else
             {
@@ -59,25 +59,25 @@ namespace FlashLearnW.Views
             switch (clickedButton.Name)
             {
                 case "Perfect_Button":
-                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Perfect);
+                    new CardExplorerNew().ProcessResponse(app.AppWideUserSet, (int)enmAnswerQuality.Perfect);
                     break;
                 case "Easy_Button":
-                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Hesitation);
+                    new CardExplorerNew().ProcessResponse(app.AppWideUserSet, (int)enmAnswerQuality.Hesitation);
                     break;
                 case "Difficult_Button":
-                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Difficult);
+                    new CardExplorerNew().ProcessResponse(app.AppWideUserSet, (int)enmAnswerQuality.Difficult);
                     break;
                 case "Wrong_Button":
-                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.IncorrectButRemebered);
+                    new CardExplorerNew().ProcessResponse(app.AppWideUserSet, (int)enmAnswerQuality.IncorrectButRemebered);
                     break;
                 case "Blackout_Button":
-                    new CardExplorerNew().ProcessResponse(app.AppWideUSerSet, (int)enmAnswerQuality.Blackout);                  
+                    new CardExplorerNew().ProcessResponse(app.AppWideUserSet, (int)enmAnswerQuality.Blackout);                  
                     break;
                 default:
                     break;
             }
 
-            Grid_Card.DataContext = app.AppWideUSerSet.CurrentCard;
+            Grid_Card.DataContext = app.AppWideUserSet.CurrentCard;
         }
     }
 }
