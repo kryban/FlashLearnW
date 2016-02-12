@@ -50,11 +50,30 @@ namespace FlashLearnW
             this.Suspending += this.OnSuspending;
 
             // default or recently loaded userSet will be loaded
-            appWideUserSet = new DataLoader().Load(); 
+            appWideUserSet = new DataLoader().Load();
+
+            GoBack();
 
             // userSet opslaan indien het nog niet bewaard is.
 
         }
+
+
+        public static void GoBack()
+        {
+            Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+        }
+
+#if WINDOWS_PHONE_APP
+        private static void HardwareButtons_BackPressed(object sender, Windows.Phone.UI.Input.BackPressedEventArgs e)
+        {
+            if (RootFrame != null && RootFrame.CanGoBack)
+            {
+                e.Handled = true;
+                RootFrame.GoBack();
+            }
+        }
+#endif
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
@@ -159,5 +178,6 @@ namespace FlashLearnW
             await SuspensionManager.SaveAsync();
             deferral.Complete();
         }
+
     }
 }
