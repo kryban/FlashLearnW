@@ -11,8 +11,8 @@
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="Answer" />
     <RootPropertyPathName Name="Question" />
-    <RootPropertyPathName Name="AllCardSets" />
     <RootPropertyPathName Name="Name" />
+    <RootPropertyPathName Name="AllCardSets" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -68,6 +68,7 @@
       <RootProperty Name="CharacterSpacing" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="FlashLearnW.Views.Maintain_UserControl" />
     <RootType FullName="FlashLearnW.Views.Learn_UserControl" />
@@ -130,6 +131,8 @@
       <RootProperty Name="HorizontalContentAlignment" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="MinWidth" />
+      <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
       <RootEvent Name="Click" />
     </RootType>
@@ -158,6 +161,7 @@
       <RootProperty Name="Foreground" />
       <RootProperty Name="Text" />
       <RootProperty Name="TextWrapping" />
+      <RootProperty Name="BorderBrush" />
     </RootType>
     <RootType FullName="FlashLearnW.Views.OverviewDetail_Page" />
   </Roots.RootTypes>

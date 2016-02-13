@@ -18,21 +18,11 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="1">
-            <TextBlock Name="OverviewDetail_Page_Title" VerticalAlignment="Bottom" FontSize="35" Foreground="#FF3D76A8"
-                       Text="{Binding Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
-        </Grid>
+            <TextBlock Name="OverviewDetail_Page_Title" VerticalAlignment="Bottom" FontSize="35"
+                       Text="Title" />
+        </Grid>   
         
-        <Grid Grid.Row="2">
-            <TextBlock Name="OverviewDetail_Page_Description" VerticalAlignment="Top" FontSize="20" Foreground="#FFA2A2A2"
-                       Text="{Binding Description, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,0" 
-                       TextWrapping="Wrap" />
-        </Grid>
-
-        <Grid Grid.Row="3">
-            
-        </Grid>
-
-
 
     </Grid>
 </Page>
+

@@ -22,6 +22,8 @@ namespace FlashLearnW.Views
     /// </summary>
     public sealed partial class OverviewDetail_Page : Page
     {
+        private App currentApp = App.Current as App;
+
         public OverviewDetail_Page()
         {
             this.InitializeComponent();
@@ -35,6 +37,9 @@ namespace FlashLearnW.Views
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            string cardSetID = e.Parameter.ToString();
+
+            OverviewDetail_Page_CardGrid.DataContext = currentApp.AppWideUserSet.AllCardSets.FirstOrDefault(x => x.ID == cardSetID);
         }
     }
 }
