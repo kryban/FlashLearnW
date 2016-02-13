@@ -47,8 +47,7 @@ namespace FlashLearnW.Views
             }
             else
             {
-                ShowAnswer_Button.Content = "Show";
-                Answer_TextBox.Text = "";
+                EmptyTheAsnwerBox();
             }
         }
 
@@ -78,6 +77,13 @@ namespace FlashLearnW.Views
             }
 
             Grid_Card.DataContext = app.AppWideUserSet.CurrentCard;
+            EmptyTheAsnwerBox();
+        }
+
+        private void EmptyTheAsnwerBox()
+        {
+            ShowAnswer_Button.Content = "Show";
+            Answer_TextBox.Text = "";
         }
     }
 }

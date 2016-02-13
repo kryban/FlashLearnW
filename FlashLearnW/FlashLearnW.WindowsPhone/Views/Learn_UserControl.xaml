@@ -45,7 +45,7 @@
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1"
                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
                      Text="{Binding Question, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                     TextWrapping="Wrap" />
+                     TextWrapping="Wrap" BorderBrush="#FF3B3B3B" />
         </Grid>
 
         <Grid Grid.Row="1">
@@ -62,39 +62,43 @@
             <TextBox Grid.Row="1" Background="Transparent" BorderThickness="1" Name="Answer_TextBox"
                      VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="White"
                      Text="{Binding Answer, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
-                     TextWrapping="Wrap"/>
+                     TextWrapping="Wrap" BorderBrush="#FF3B3B3B"/>
         </Grid>
-        
+
         <Grid Grid.Row="2">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
-                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
 
                 <Grid Grid.Column="0" Name="Perfect_Button_Grid">
-                    <Button Content="Perfect" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
-                            Name="Perfect_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder0}" Click="Button_Click"/>
+                    <Button Content="Perfect" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"
+                            Name="Perfect_Button" Width="{Binding ActualWidth, ElementName=Perfect_Button_Grid}" 
+                            Click="Button_Click" MinWidth="0" BorderBrush="#FF3B3B3B"  />
                 </Grid>
                 <Grid Grid.Column="1" Name="Easy_Button_Grid">
-                    <Button Content="Easy" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"
-                            Name="Easy_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder1}" Click="Button_Click" />
+                    <Button Content="Easy" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" 
+                            Name="Easy_Button" Click="Button_Click" MinWidth="0"  BorderBrush="#FF3B3B3B" />
                 </Grid>
                 <Grid Grid.Column="2" Name="Difficult_Button_Grid">
-                    <Button Content="Difficult" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
-                            Name="Difficult_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" Click="Button_Click"/>
+                    <Button Content="Difficult" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"  
+                            Name="Difficult_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" 
+                            Click="Button_Click" MinWidth="0" BorderBrush="#FF3B3B3B"  />
                 </Grid>
                 <Grid Grid.Column="3" Name="Wrong_Button_Grid">
-                    <Button Content="Wrong" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch"  
-                            Name="Wrong_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" Click="Button_Click"/>
+                    <Button Content="Wrong" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch"  
+                            Name="Wrong_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" 
+                            Click="Button_Click" MinWidth="0"  BorderBrush="#FF3B3B3B"  />
                 </Grid>
                 <Grid Grid.Column="4" Name="Blackout_Button_Grid">
-                    <Button Content="Blackout" HorizontalContentAlignment="Left" HorizontalAlignment="Stretch" 
-                            Name="Blackout_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" Click="Button_Click" />
+                    <Button Content="Blackout" HorizontalContentAlignment="Center" HorizontalAlignment="Stretch" 
+                            Name="Blackout_Button" Width="{Binding ActualWidth, ElementName=ButtonHolder2}" 
+                            Click="Button_Click" MinWidth="0"  BorderBrush="#FF3B3B3B"/>
                 </Grid>
 
             </Grid>

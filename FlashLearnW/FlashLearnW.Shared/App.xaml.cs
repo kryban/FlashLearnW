@@ -58,7 +58,6 @@ namespace FlashLearnW
 
         }
 
-
         public static void GoBack()
         {
             Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
