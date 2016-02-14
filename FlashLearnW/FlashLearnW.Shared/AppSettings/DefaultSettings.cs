@@ -14,10 +14,11 @@ namespace FlashLearnW.AppSettings
 
             DefaultSettingsDictionary = new Dictionary<string, string>()
             {
-                 {AppSettingsKeyNames.FakeUserSetName, "Default" }
-                ,{AppSettingsKeyNames.MinimumEasinessFactor, "1.3" }
-                ,{AppSettingsKeyNames.UseMinimumEasinessFactor, "true" }
-                ,{AppSettingsKeyNames.UserSetPath, localSettingsPath  }
+                  {AppSettingsKeyNames.FakeUserSetName, "Default" }
+                , {AppSettingsKeyNames.MinimumEasinessFactor, "1.3" }
+                , {AppSettingsKeyNames.UseMinimumEasinessFactor, "true" }
+                , {AppSettingsKeyNames.UserSetPath, localSettingsPath  }
+                , {AppSettingsKeyNames.ExpectedLearnDay, DateTime.Today.ToString() }
                 //,{AppSettingsKeyNames.RecentlyUsedUserSet, String.Empty }
             };
         }

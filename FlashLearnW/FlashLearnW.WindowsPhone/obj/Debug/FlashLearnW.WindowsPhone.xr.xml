@@ -13,6 +13,7 @@
     <RootPropertyPathName Name="Question" />
     <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="AllCardSets" />
+    <RootPropertyPathName Name="NumberOfCardsToLearn" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -69,6 +70,7 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Name" />
+      <RootEvent Name="Loaded" />
     </RootType>
     <RootType FullName="FlashLearnW.Views.Maintain_UserControl" />
     <RootType FullName="FlashLearnW.Views.Learn_UserControl" />

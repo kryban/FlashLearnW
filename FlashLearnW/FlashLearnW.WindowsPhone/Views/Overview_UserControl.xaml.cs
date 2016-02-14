@@ -22,17 +22,15 @@ namespace FlashLearnW.Views
 {
     public sealed partial class Overview_UserControl : UserControl
     {
+        int numberOfCardsToLearn;
+
         public Overview_UserControl()
         {
             this.InitializeComponent();
 
             App app = App.Current as App;
 
-            UserSet foo = app.AppWideUserSet;
-
-            LearnCardSets_Overview.DataContext = foo;
-
-            //var bar = foo.AllCardSets[0].
+            LearnCardSets_Overview.DataContext = app.AppWideUserSet;
         }
 
         /// <summary>
@@ -43,9 +41,7 @@ namespace FlashLearnW.Views
         private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var itemId = ((CardSet)e.ClickedItem).ID;
-
             
-
             bool pageCanBeLoaded = App.RootFrame.Navigate((typeof(OverviewDetail_Page)), itemId);
 
             if (!pageCanBeLoaded)
@@ -53,6 +49,12 @@ namespace FlashLearnW.Views
                 var resourceLoader = ResourceLoader.GetForCurrentView("Resources");
                 throw new Exception(resourceLoader.GetString("NavigationFailedExceptionMessage"));
             }
+        }
+
+        public void Overview_Listview_NameTextBlock_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+           
         }
     }
 }

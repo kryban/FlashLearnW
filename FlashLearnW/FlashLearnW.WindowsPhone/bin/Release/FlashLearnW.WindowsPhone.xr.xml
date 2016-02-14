@@ -11,8 +11,8 @@
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="Answer" />
     <RootPropertyPathName Name="Question" />
-    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="AllCardSets" />
+    <RootPropertyPathName Name="Name" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />

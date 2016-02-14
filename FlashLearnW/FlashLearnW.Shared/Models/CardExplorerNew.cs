@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 
 
 using FlashLearnW.Interfaces;
+using System.Reflection;
 
 namespace FlashLearnW.Models
 {
@@ -30,15 +31,56 @@ namespace FlashLearnW.Models
 
 		public void ProcessResponse(IUserSet currentUserSet, int answerQuality)
 		{
-			new CardMaintainer().ModifyNextIteration(currentUserSet.CurrentCard, answerQuality); 
+			new CardMaintainer().ModifyNextIteration(currentUserSet.CurrentCard, answerQuality);
 
-			currentUserSet.CurrentCardSet = ComposeToLearnCardSet(currentUserSet.CurrentCardSet, DateTime.Today.AddDays(1));
-			SetNumberOfCardsInLearnSet(currentUserSet);
+            DateTime learnDay = Convert.ToDateTime(AppSettings.AppSettingsWrapper.GetSetting(AppSettings.AppSettingsKeyNames.ExpectedLearnDay));
+
+			currentUserSet.CurrentCardSet = ComposeToLearnCardSet(currentUserSet.CurrentCardSet, learnDay);
+			//NumberOfCardsInLearnSet(currentUserSet);
+
+            SaveChangesToCard(currentUserSet, currentUserSet.CurrentCard);
 
 			NextCard(currentUserSet, currentUserSet.CurrentCard);
 		}
 
-		private int SetNumberOfCardsInLearnSet(IUserSet currentUserSet)
+        private void SaveChangesToCard(IUserSet currentUserSet, ICard currentCard)
+        {       
+            Card existingCard = FindCard(currentUserSet, currentCard);
+            Card modifiedCard = (Card)currentCard;
+
+            Type typeOfExistingCard = existingCard.GetType();
+            Type typeOfModifiedCard = modifiedCard.GetType();
+
+            List<PropertyInfo> propertiesExistingCard = new List<PropertyInfo>(typeOfExistingCard.GetRuntimeProperties());
+            List<PropertyInfo> propertiesModifiedCard = new List<PropertyInfo>(typeOfModifiedCard.GetRuntimeProperties());
+
+            // check if the properties are changed in the meantime. Should not be.
+            for (int i = 0; i < propertiesExistingCard.Count; i++)
+            {
+                if(propertiesExistingCard[i].Name == propertiesModifiedCard[i].Name)
+                {
+                    propertiesExistingCard[i].SetValue(existingCard, propertiesModifiedCard[i].GetValue(modifiedCard));
+                }
+                else
+                {
+                    throw new ArrayTypeMismatchException("Cannot save the modified Card information",
+                                                            new Exception(
+                                                                "The type of the card is changed, because the properties ofthe existing and modified cards are not the same "));
+                }
+            }
+        }
+
+        private Card FindCard(IUserSet currentUserSet, ICard currentCard)
+        {
+            foreach (var CardSet in currentUserSet.AllCardSets)
+            {
+                return CardSet.Cards.FirstOrDefault(x => x.ID == currentCard.ID);
+            }
+
+            return null;
+        }
+
+        private int NumberOfCardsInLearnSet(IUserSet currentUserSet)
 		{
 			return currentUserSet.CurrentCardSet.Cards.Count;
 		}

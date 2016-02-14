@@ -32,5 +32,10 @@ namespace FlashLearnW.AppSettings
         /// String value. Contains the full path of the most recent user set.
         /// </summary>
         public static string RecentlyUsedUserSet { get { return "recentlyUsedUserSet"; } }
+
+        /// <summary>
+        /// DateTime value. Represents a date. Cards will be selected that has the next iteration before this date.
+        /// </summary>
+        public static string ExpectedLearnDay { get { return "expectedLearnDay"; } }
     }
 }

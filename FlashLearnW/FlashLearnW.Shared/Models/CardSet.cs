@@ -5,6 +5,10 @@ using FlashLearnW.Interfaces;
 using System.ComponentModel;
 using System.Collections.Specialized;
 using System.Collections.ObjectModel;
+using System.Linq;
+
+using FlashLearnW.AppSettings;
+using System;
 
 namespace FlashLearnW.Models
 {
@@ -37,12 +41,30 @@ namespace FlashLearnW.Models
 
         public ObservableCollection<Card> Cards { get; set; }
 
+        private int numberOfCardsToLearn;
+        public int NumberOfCardsToLearn
+        {
+            get
+            {
+                DateTime learnDate = Convert.ToDateTime(AppSettingsWrapper.GetSetting(AppSettingsKeyNames.ExpectedLearnDay));
+                numberOfCardsToLearn = Cards.Where(x => x.ShowDate <= learnDate).ToList<Card>().Count();
+                return numberOfCardsToLearn;
+            }
+
+            private set
+            {
+                numberOfCardsToLearn = value;
+            }
+        }
+
         public CardSet(string name, string description)
         {
             ID = IdGenerator.Generate("CS_");
             Name = name;
             Description = description;
             Cards = new ObservableCollection<Card>();
+
+
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
