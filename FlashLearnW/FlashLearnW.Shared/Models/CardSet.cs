@@ -57,12 +57,31 @@ namespace FlashLearnW.Models
             }
         }
 
+        public string RepresentableNumberOfCardsText
+        {
+            get
+            {
+                switch (NumberOfCardsToLearn)
+                {
+                    case 0:
+                        return "no card";
+                    case 1:
+                        return numberOfCardsToLearn.ToString() + " card";
+                    default:
+                        return numberOfCardsToLearn.ToString() + " cards";
+                }
+            }
+        }
+
         public CardSet(string name, string description)
         {
             ID = IdGenerator.Generate("CS_");
             Name = name;
             Description = description;
             Cards = new ObservableCollection<Card>();
+
+            DateTime learnDate = Convert.ToDateTime(AppSettingsWrapper.GetSetting(AppSettingsKeyNames.ExpectedLearnDay));
+            numberOfCardsToLearn = Cards.Where(x => x.ShowDate <= learnDate).ToList<Card>().Count();
 
 
         }

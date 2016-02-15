@@ -1,5 +1,4 @@
-﻿using FlashLearnW.Data;
-using FlashLearnW.Models;
+﻿using FlashLearnW.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,17 +19,16 @@ using Windows.UI.Xaml.Navigation;
 
 namespace FlashLearnW.Views
 {
-    public sealed partial class Overview_UserControl : UserControl
+    public sealed partial class CardSetsOverview_UserControl : UserControl
     {
-        int numberOfCardsToLearn;
+        App app = App.Current as App;
 
-        public Overview_UserControl()
+        public CardSetsOverview_UserControl()
         {
             this.InitializeComponent();
 
-            App app = App.Current as App;
-
-            LearnCardSets_Overview.DataContext = app.AppWideUserSet;
+            CardSetsOverview_Grid.DataContext = app.AppWideUserSet;
+            
         }
 
         /// <summary>
@@ -41,7 +39,7 @@ namespace FlashLearnW.Views
         private void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
             var itemId = ((CardSet)e.ClickedItem).ID;
-            
+
             bool pageCanBeLoaded = App.RootFrame.Navigate((typeof(OverviewDetail_Page)), itemId);
 
             if (!pageCanBeLoaded)
@@ -51,10 +49,5 @@ namespace FlashLearnW.Views
             }
         }
 
-        public void Overview_Listview_NameTextBlock_Loaded(object sender, RoutedEventArgs e)
-        {
-            
-           
-        }
     }
 }

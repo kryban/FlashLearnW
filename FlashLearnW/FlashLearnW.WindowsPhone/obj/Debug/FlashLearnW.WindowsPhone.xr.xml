@@ -8,12 +8,12 @@
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ImagePath" />
+    <RootPropertyPathName Name="AllCardSets" />
+    <RootPropertyPathName Name="RepresentableNumberOfCardsText" />
+    <RootPropertyPathName Name="Name" />
     <RootPropertyPathName Name="ActualWidth" />
     <RootPropertyPathName Name="Answer" />
     <RootPropertyPathName Name="Question" />
-    <RootPropertyPathName Name="Name" />
-    <RootPropertyPathName Name="AllCardSets" />
-    <RootPropertyPathName Name="NumberOfCardsToLearn" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
@@ -45,6 +45,7 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
       <RootProperty Name="Margin" />
@@ -74,7 +75,7 @@
     </RootType>
     <RootType FullName="FlashLearnW.Views.Maintain_UserControl" />
     <RootType FullName="FlashLearnW.Views.Learn_UserControl" />
-    <RootType FullName="FlashLearnW.Views.Overview_UserControl" />
+    <RootType FullName="FlashLearnW.Views.CardSetsOverview_UserControl" />
     <RootType FullName="FlashLearnW.IndexPivotPage" />
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="RelativeSource" />
@@ -127,6 +128,9 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Resources" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Documents.Run">
+      <RootProperty Name="Text" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Name" />
       <RootProperty Name="Content" />
@@ -166,5 +170,6 @@
       <RootProperty Name="BorderBrush" />
     </RootType>
     <RootType FullName="FlashLearnW.Views.OverviewDetail_Page" />
+    <RootType FullName="FlashLearnW.Views.Overview_UserControl" />
   </Roots.RootTypes>
 </Roots>

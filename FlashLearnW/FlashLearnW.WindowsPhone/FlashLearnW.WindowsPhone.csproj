@@ -87,6 +87,9 @@
     <Compile Include="SectionPage.xaml.cs">
       <DependentUpon>SectionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\CardSetsOverview_UserControl.xaml.cs">
+      <DependentUpon>CardSetsOverview_UserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Maintain_UserControl.xaml.cs">
       <DependentUpon>Maintain_UserControl.xaml</DependentUpon>
     </Compile>
@@ -95,9 +98,6 @@
     </Compile>
     <Compile Include="Views\OverviewDetail_Page.xaml.cs">
       <DependentUpon>OverviewDetail_Page.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Overview_UserControl.xaml.cs">
-      <DependentUpon>Overview_UserControl.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -125,6 +125,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\CardSetsOverview_UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Maintain_UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -134,10 +138,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\OverviewDetail_Page.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\Overview_UserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
