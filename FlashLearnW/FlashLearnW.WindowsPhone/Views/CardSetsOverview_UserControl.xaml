@@ -13,6 +13,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
         <ListView
@@ -53,7 +54,23 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+      
+        <!--<Page Grid.Row="2">
+            <Page.BottomAppBar>
+                <CommandBar>
 
+                    <AppBarToggleButton Icon="Shuffle" Label="Shuffle" />
+                    <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
+                    <AppBarButton Icon="Play" Label="Play"/>
+                    <AppBarButton Icon="Forward" Label="Forward"/>
+
+                    <CommandBar.Content>
+                        <TextBlock Text="Import set" />
+                    </CommandBar.Content>
+                    
+                </CommandBar>
+            </Page.BottomAppBar>
+        </Page>-->
 
     </Grid>
 </UserControl>

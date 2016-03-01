@@ -45,7 +45,6 @@
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Name" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Pivot">
       <RootProperty Name="Margin" />
@@ -57,6 +56,10 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="FlashLearnW.Views.Options_Page" />
+    <RootType FullName="FlashLearnW.Views.Maintain_UserControl" />
+    <RootType FullName="FlashLearnW.Views.Learn_UserControl" />
+    <RootType FullName="FlashLearnW.Views.CardSetsOverview_UserControl" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
       <RootProperty Name="Text" />
       <RootProperty Name="FontSize" />
@@ -71,11 +74,7 @@
       <RootProperty Name="Inlines" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Name" />
-      <RootEvent Name="Loaded" />
     </RootType>
-    <RootType FullName="FlashLearnW.Views.Maintain_UserControl" />
-    <RootType FullName="FlashLearnW.Views.Learn_UserControl" />
-    <RootType FullName="FlashLearnW.Views.CardSetsOverview_UserControl" />
     <RootType FullName="FlashLearnW.IndexPivotPage" />
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="RelativeSource" />
@@ -140,6 +139,8 @@
       <RootProperty Name="MinWidth" />
       <RootProperty Name="BorderBrush" />
       <RootProperty Name="BorderThickness" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Control">
@@ -169,7 +170,12 @@
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="BorderBrush" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.RadioButton" />
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="FlashLearnW.Views.OverviewDetail_Page" />
-    <RootType FullName="FlashLearnW.Views.Overview_UserControl" />
+    <RootType FullName="FlashLearnW.Views.TstPage" />
   </Roots.RootTypes>
 </Roots>

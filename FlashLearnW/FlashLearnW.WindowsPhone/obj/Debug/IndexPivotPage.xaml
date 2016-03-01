@@ -36,7 +36,8 @@
             </PivotItem>
 
             <PivotItem Name="OptionsPivotItem" Header="Options">
-                <TextBlock Text="Settings for the app"/>
+                <!--<TextBlock Text="Settings for the app"/>-->
+                <localViews:Options_Page />
             </PivotItem> 
             
         </Pivot>
