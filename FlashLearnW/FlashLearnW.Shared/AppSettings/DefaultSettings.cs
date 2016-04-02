@@ -18,8 +18,9 @@ namespace FlashLearnW.AppSettings
                 , {AppSettingsKeyNames.MinimumEasinessFactor, "1.3" }
                 , {AppSettingsKeyNames.UseMinimumEasinessFactor, "true" }
                 , {AppSettingsKeyNames.UserSetPath, localSettingsPath  }
+                , {AppSettingsKeyNames.RecentlyUsedUserSet, "Unknown" }
                 , {AppSettingsKeyNames.ExpectedLearnDay, DateTime.Today.ToString() }
-                //,{AppSettingsKeyNames.RecentlyUsedUserSet, String.Empty }
+
             };
         }
 

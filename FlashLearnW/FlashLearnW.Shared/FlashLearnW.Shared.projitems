@@ -16,7 +16,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)AppSettings\AppSettingsWrapper.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\AppSettingsNames.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings\AppSettingsKeyNames.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AppSettings\DefaultSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\DataLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Common\DataSerializer.cs" />

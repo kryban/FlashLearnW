@@ -1,4 +1,6 @@
 ﻿using FlashLearnW.Interfaces;
+using FlashLearnW.AppSettings;
+using FlashLearnW.Common;
 using System;
 
 namespace FlashLearnW.Models
@@ -48,6 +50,12 @@ namespace FlashLearnW.Models
         public void DeleteCard(ICard cardToDelete)
         {
             CardSet.Cards.Remove((Card)cardToDelete);
+        }
+
+        public void Export(ICardSet cardSet)
+        {
+            string path = AppSettingsWrapper.GetSetting(AppSettingsKeyNames.UserSetPath);
+            new DataSerializer().Serialize(path, cardSet);
         }
 
     }

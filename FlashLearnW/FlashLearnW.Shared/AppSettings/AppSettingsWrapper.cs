@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Windows.Storage;
 
 namespace FlashLearnW.AppSettings
@@ -29,8 +30,9 @@ namespace FlashLearnW.AppSettings
                 }
 
                 string foo = appSettings.Values[setting.Key].ToString();
+                var bar = appSettings.Containers.Keys;
 
-                if (appSettings.Values[setting.Key] == null || appSettings.Values[setting.Key] == string.Empty)
+                if (appSettings.Values[setting.Key] == null) //|| appSettings.Values[setting.Key].ToString() == string.Empty)
                 {
                     appSettings.Values.Add(setting.Key, setting.Value);
                 }
@@ -41,12 +43,14 @@ namespace FlashLearnW.AppSettings
         {
             LoadDefaultSettingsAtFirstRun();
 
-            if (appSettings.Values.ContainsKey(settingName))
+            try
             {
                 return appSettings.Values[settingName].ToString();
             }
-
-            return String.Empty;
+            catch(Exception e)
+            {
+                throw new ArgumentException("Given Setting not found.", e.InnerException);
+            }
         }
 
         public static void AddSetting(string settingName, object value)

@@ -68,3 +68,4 @@ C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsP
 C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\Views\Options_Page.g.cs
 C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\Views\Options_Page.xaml
 C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\Views\Options_Page.xbf
+C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\obj\Debug\FlashLearnW.WindowsPhone.csprojResolveAssemblyReference.cache

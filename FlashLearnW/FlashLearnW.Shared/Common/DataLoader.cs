@@ -23,7 +23,7 @@ namespace FlashLearnW.Common
         {
             string recentUSerSet = AppSettingsWrapper.GetSetting(AppSettingsKeyNames.RecentlyUsedUserSet);
 
-            if (recentUSerSet == String.Empty)
+            if (recentUSerSet == "Unknown" || recentUSerSet.Length == 0)
             {
                 FakeDataHolder fakeDataHolder = new FakeDataHolder();
                 fakeDataHolder.LoadFakeData();
