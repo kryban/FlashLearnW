@@ -8,7 +8,7 @@ namespace FlashLearnW.Interfaces
 {
     public interface ICardSetMaintainer
     {
-        ICardSet CardSet { get; set; }
+        ICardSet CardSet { get; }
 
         void AddNewCard(string question, string answer);
     }

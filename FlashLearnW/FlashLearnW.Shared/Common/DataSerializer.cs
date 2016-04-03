@@ -11,6 +11,7 @@ using Newtonsoft.Json; // http://james.newtonking.com/json
 using System.IO;
 using Windows.Storage;
 using FlashLearnW.Models;
+using System.Text.RegularExpressions;
 
 namespace FlashLearnW.Common
 {
@@ -25,15 +26,32 @@ namespace FlashLearnW.Common
             jsonSerializer.NullValueHandling = NullValueHandling.Ignore;
         }
 
-        public void Serialize(string path, object objectToSerialize)
+        public bool SerializeToLocalFolder(string name, object objectToSerialize)
         {
-            Stream stream = ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(path, CreationCollisionOption.ReplaceExisting).Result;
+            bool SerializeResult;
 
-            using (StreamWriter sw = new StreamWriter(stream))
-            using(JsonTextWriter jsonTextWriter = new JsonTextWriter(sw))
+            try
             {
-                jsonSerializer.Serialize(jsonTextWriter, objectToSerialize);
+                string tmpName = Regex.Replace(name, "[^0-9a-zA-Z]+", "");
+                tmpName += tmpName + ".json";
+
+                Stream stream = ApplicationData.Current.LocalFolder.OpenStreamForWriteAsync(tmpName, CreationCollisionOption.ReplaceExisting).Result;
+
+                using (StreamWriter sw = new StreamWriter(stream))
+                using (JsonTextWriter jsonTextWriter = new JsonTextWriter(sw))
+                {
+                    jsonSerializer.Serialize(jsonTextWriter, objectToSerialize);
+                }
+
+                SerializeResult = true;
             }
+            catch (Exception)
+            {
+                SerializeResult = false;
+                throw;
+            }
+
+            return SerializeResult;
         }
 
         public UserSet Deserialize(string path) 

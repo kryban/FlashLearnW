@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FlashLearnW.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,6 +25,8 @@ namespace FlashLearnW.Views
     {
         private App currentApp = App.Current as App;
 
+        private CardSet currentCardSet;
+
         public OverviewDetail_Page()
         {
             this.InitializeComponent();
@@ -39,7 +42,14 @@ namespace FlashLearnW.Views
         {
             string cardSetID = e.Parameter.ToString();
 
-            OverviewDetail_Page_CardGrid.DataContext = currentApp.AppWideUserSet.AllCardSets.FirstOrDefault(x => x.ID == cardSetID);
+            currentCardSet = currentApp.AppWideUserSet.AllCardSets.FirstOrDefault(x => x.ID == cardSetID);
+
+            OverviewDetail_Page_CardGrid.DataContext = currentCardSet;
+        }
+
+        private void Button_Click_Export_CardSet(object sender, RoutedEventArgs e)
+        {
+            new CardSetMaintainer(currentCardSet).Export();
         }
     }
 }

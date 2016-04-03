@@ -2,12 +2,14 @@
 using FlashLearnW.AppSettings;
 using FlashLearnW.Common;
 using System;
+using Windows.UI.Popups;
+using System.Text.RegularExpressions;
 
 namespace FlashLearnW.Models
 {
     public class CardSetMaintainer: ICardSetMaintainer
     {
-        public ICardSet CardSet { get; set; }
+        public ICardSet CardSet { get; private set; }
 
         public CardSetMaintainer(ICardSet cardSet)
         {
@@ -52,10 +54,26 @@ namespace FlashLearnW.Models
             CardSet.Cards.Remove((Card)cardToDelete);
         }
 
-        public void Export(ICardSet cardSet)
+        public async void Export()
         {
             string path = AppSettingsWrapper.GetSetting(AppSettingsKeyNames.UserSetPath);
-            new DataSerializer().Serialize(path, cardSet);
+
+            bool ExportSucceeded = new DataSerializer().SerializeToLocalFolder(CardSet.Name, CardSet);
+
+            string tmpName = Regex.Replace(CardSet.Name, "[^0-9a-zA-Z]+", "");
+            tmpName += tmpName + ".json";
+
+            if (ExportSucceeded)
+            {
+                MessageDialog messageBox = new MessageDialog("CardSet saved as " + tmpName + " in the Local folder.");
+                await messageBox.ShowAsync();
+            }
+            else
+            {
+                MessageDialog messageBox = new MessageDialog("Oops. Something went wrong. Could not save this CardSet.");
+                await messageBox.ShowAsync();
+            }
+
         }
 
     }
