@@ -58,7 +58,9 @@ CardMaintainer krijgt de kaart die ht moet bewerken via de constructor binnen.
 Dat is niet handig, aangezien in mainscreen de referentie naar CardMaintainter in het begin al gemaakt word.
 De current card wijzigt namelijk heel vaak en de methoden in mainscreen zullen de cardmaintainer voor verschillende kaarten gebruiken.
 
-CentralSettings class vervangen door app.config
+op het moment dat de de gebruiker de applicatie verlaat, dan moeten de gegeven op file opgeslagen worden en bij het openen
+moeten de gegeven van file ingelezen worden.
+
 
 //////// Semantic logging service
 You can now edit the configuration file to log events from your own application by opening 'SemanticLogging-svc.xml'.

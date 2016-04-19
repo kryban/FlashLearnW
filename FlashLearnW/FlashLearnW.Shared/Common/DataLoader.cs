@@ -38,13 +38,19 @@ namespace FlashLearnW.Common
 
 		private UserSet LoadFromFile(string filePath)
 		{
-			UserSet loadedUserSet = serializer.Deserialize(filePath);
+            UserSet loadedUserSet;
 
-			//set current cardset
-			loadedUserSet.CurrentCardSet = loadedUserSet.AllCardSets[0];
+            serializer.Deserialize(filePath, out loadedUserSet);
 
-			//set card to show
-			loadedUserSet.CurrentCard = loadedUserSet.CurrentCardSet.Cards[0];
+            if (loadedUserSet != null)
+            {
+                //set current cardset
+                loadedUserSet.CurrentCardSet = loadedUserSet.AllCardSets[0];
+                //set card to show
+                loadedUserSet.CurrentCard = loadedUserSet.CurrentCardSet.Cards[0];
+            }
+            else
+                loadedUserSet = null;
 
 			return loadedUserSet;
 		}

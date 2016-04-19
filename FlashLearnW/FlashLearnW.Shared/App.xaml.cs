@@ -33,8 +33,11 @@ namespace FlashLearnW
         private TransitionCollection transitions;
 #endif
 
+        public ContinuationManager ContinuationManager { get; private set; }
+
         private UserSet appWideUserSet;
         public UserSet AppWideUserSet { get { return appWideUserSet; } }
+
 
         //public static string TestProp { get { return "Test App global var"; } }
 

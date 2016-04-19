@@ -11,7 +11,7 @@ namespace FlashLearnW.Interfaces
     public interface ISerializer
     {
         bool SerializeToLocalFolder(string path, object objectToSerialize);
-        UserSet Deserialize(string path);
+        bool Deserialize(string path, out UserSet retval);
 		//string LoadUserSetPath();
     }
 }

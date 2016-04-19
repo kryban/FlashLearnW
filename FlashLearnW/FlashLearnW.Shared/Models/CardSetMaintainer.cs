@@ -60,12 +60,11 @@ namespace FlashLearnW.Models
 
             bool ExportSucceeded = new DataSerializer().SerializeToLocalFolder(CardSet.Name, CardSet);
 
-            string tmpName = Regex.Replace(CardSet.Name, "[^0-9a-zA-Z]+", "");
-            tmpName += tmpName + ".json";
+            string tmpName = Regex.Replace(CardSet.Name, "[^0-9a-zA-Z]+", "") + ".json";
 
             if (ExportSucceeded)
             {
-                MessageDialog messageBox = new MessageDialog("CardSet saved as " + tmpName + " in the Local folder.");
+                MessageDialog messageBox = new MessageDialog("CardSet saved as " + tmpName + " in your Local folder.");
                 await messageBox.ShowAsync();
             }
             else
@@ -75,6 +74,5 @@ namespace FlashLearnW.Models
             }
 
         }
-
     }
 }
