@@ -25,6 +25,8 @@ namespace FlashLearnW.Common
         private JsonSerializer jsonSerializer;
 		private string DefaultPathUserSet;
 
+        
+
         public bool SerializeResult { get; private set; }
 
         public DataSerializer()
@@ -93,6 +95,7 @@ namespace FlashLearnW.Common
         }
 
         // All about filepicker in Windows Phone App
+        // https://msdn.microsoft.com/en-us/library/windows/apps/dn642086(v=vs.105).aspx
         // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn631755.aspx
         // https://msdn.microsoft.com/en-us/library/windows/apps/xaml/dn614994.aspx
 
@@ -106,11 +109,11 @@ namespace FlashLearnW.Common
             {
                 //string tmpName = Regex.Replace(path, "[^0-9a-zA-Z]+", "") + ".json";
 
-                FileOpenPicker fileOpenPicker = new FileOpenPicker();
-                fileOpenPicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
-                fileOpenPicker.FileTypeFilter.Add(".json");
-                fileOpenPicker.ViewMode = PickerViewMode.List;
-                fileOpenPicker.PickSingleFileAndContinue();
+                //FileOpenPicker fileOpenPicker = new FileOpenPicker();
+                //fileOpenPicker.SuggestedStartLocation = PickerLocationId.DocumentsLibrary;
+                //fileOpenPicker.FileTypeFilter.Add(".json");
+                //fileOpenPicker.ViewMode = PickerViewMode.List;
+                //fileOpenPicker.PickSingleFileAndContinue();
 
                 // the app will be suspended after calling this 'andContinue' method
                 // The handler for the Application.Suspending event in the app.xaml.cs file calls 
@@ -146,9 +149,25 @@ namespace FlashLearnW.Common
             return deserializeResult;
         }
 
+        public void PickAFileButton_Click(object sender, RoutedEventArgs e)
+        {
+            FileOpenPicker openPicker = new FileOpenPicker();
+            openPicker.ViewMode = PickerViewMode.List;
+            //openPicker.SuggestedStartLocation = PickerLocationId.ComputerFolder;
+            openPicker.FileTypeFilter.Add(".json");
+
+            openPicker.ContinuationData["Operation"] = "ImportCardSet";
+
+            // Launch file open picker and caller app is suspended
+            // and may be terminated if required
+            openPicker.PickSingleFileAndContinue();
+        }
+
         public void ContinueFileOpenPicker(FileOpenPickerContinuationEventArgs args)
         {
-            throw new NotImplementedException();
+            var files = args.Files[0];
+
+            var t = files;
         }
 
         //public string LoadUserSetPath()

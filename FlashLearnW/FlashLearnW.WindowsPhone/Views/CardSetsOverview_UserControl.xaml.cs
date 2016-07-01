@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using FlashLearnW.Common;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -49,5 +50,14 @@ namespace FlashLearnW.Views
             }
         }
 
+        private void ItemView_AddItemClick(object sender, ItemClickEventArgs a)
+        {
+            new DataSerializer().PickAFileButton_Click(sender, a as RoutedEventArgs);
+        }
+
+        private void ImportButton_Click(object sender, RoutedEventArgs e)
+        {
+            new DataSerializer().PickAFileButton_Click(sender, e as RoutedEventArgs);
+        }
     }
 }

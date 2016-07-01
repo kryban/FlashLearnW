@@ -54,7 +54,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-      
+
+        <Button Grid.Row="2" Content="Import" Click="ImportButton_Click"/>
+
         <!--<Page Grid.Row="2">
             <Page.BottomAppBar>
                 <CommandBar>

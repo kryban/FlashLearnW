@@ -7,6 +7,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -17,6 +18,7 @@ using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 using FlashLearnW.Models;
 using FlashLearnW.Common;
+using System.Threading.Tasks;
 
 
 
@@ -33,7 +35,7 @@ namespace FlashLearnW
         private TransitionCollection transitions;
 #endif
 
-        public ContinuationManager ContinuationManager { get; private set; }
+        public ContinuationManager continuationManager { get; private set; }
 
         private UserSet appWideUserSet;
         public UserSet AppWideUserSet { get { return appWideUserSet; } }
@@ -51,6 +53,7 @@ namespace FlashLearnW
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
 
             // default or recently loaded userSet will be loaded
             appWideUserSet = new DataLoader().Load();
@@ -179,6 +182,99 @@ namespace FlashLearnW
             var deferral = e.SuspendingOperation.GetDeferral();
             await SuspensionManager.SaveAsync();
             deferral.Complete();
+        }
+
+        protected async override void OnActivated(IActivatedEventArgs e)
+        {
+            base.OnActivated(e);
+
+            continuationManager = new ContinuationManager();
+
+            Frame rootFrame = CreateRootFrame();
+            await RestoreStatusAsync(e.PreviousExecutionState);
+
+            if (rootFrame.Content == null)
+            {
+                rootFrame.Navigate(typeof(IndexPivotPage));
+            }
+
+            var continuationEventArgs = e as IContinuationActivatedEventArgs;
+            FileOpenPickerContinuationEventArgs arguments = continuationEventArgs as FileOpenPickerContinuationEventArgs;
+
+            if (continuationEventArgs != null)
+            {
+                switch (continuationEventArgs.Kind)
+                {
+                    case ActivationKind.PickFileContinuation:
+
+                        //string passedData = (string)arguments.ContinuationData["keyParameter"];
+                        StorageFile file = arguments.Files.FirstOrDefault(); // your picked file
+                                                                             // do what you want
+                        break;
+                }
+            }
+                        //var continuationEventArgs = e as IContinuationActivatedEventArgs;
+             
+
+            if (continuationEventArgs != null)
+            {
+                
+                // Call ContinuationManager to handle continuation activation
+                continuationManager.Continue(continuationEventArgs);
+            }
+
+            Window.Current.Activate();
+        }
+
+        private async Task RestoreStatusAsync(ApplicationExecutionState previousExecutionState)
+        {
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (previousExecutionState == ApplicationExecutionState.Terminated)
+            {
+                // Restore the saved session state only when appropriate
+                try
+                {
+                    await SuspensionManager.RestoreAsync();
+                }
+                catch (SuspensionManagerException)
+                {
+                    //Something went wrong restoring state.
+                    //Assume there is no state and continue
+                }
+            }
+        }
+
+        private Frame CreateRootFrame()
+        {
+            Frame rootFrame = Window.Current.Content as Frame;
+
+            // Do not repeat app initialization when the Window already has content,
+            // just ensure that the window is active
+            if (rootFrame == null)
+            {
+                // Create a Frame to act as the navigation context and navigate to the first page
+                rootFrame = new Frame();
+
+                // Set the default language
+                rootFrame.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
+                rootFrame.NavigationFailed += OnNavigationFailed;
+
+                // Place the frame in the current Window
+                Window.Current.Content = rootFrame;
+            }
+
+            return rootFrame;
+        }
+
+        /// <summary>
+        /// Invoked when Navigation to a certain page fails
+        /// </summary>
+        /// <param name="sender">The Frame which failed navigation</param>
+        /// <param name="e">Details about the navigation failure</param>
+        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
 
     }
