@@ -23,7 +23,7 @@ namespace FlashLearnW.Common
     public class DataSerializer : ISerializer, IFileOpenPickerContinuable
     {
         private JsonSerializer jsonSerializer;
-		private string DefaultPathUserSet;
+		//private string DefaultPathUserSet;
 
         
 
@@ -149,6 +149,13 @@ namespace FlashLearnW.Common
             return deserializeResult;
         }
 
+        public async Task<CardSet> DeserializeFrom_StorageFile(StorageFile file)
+        {
+            string fileContent = await FileIO.ReadTextAsync(file);
+
+            return JsonConvert.DeserializeObject<CardSet>(fileContent);
+        }
+
         public void PickAFileButton_Click(object sender, RoutedEventArgs e)
         {
             FileOpenPicker openPicker = new FileOpenPicker();
@@ -157,6 +164,8 @@ namespace FlashLearnW.Common
             openPicker.FileTypeFilter.Add(".json");
 
             openPicker.ContinuationData["Operation"] = "ImportCardSet";
+
+            var t = openPicker.ContinuationData["Operation"];
 
             // Launch file open picker and caller app is suspended
             // and may be terminated if required

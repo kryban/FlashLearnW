@@ -31,6 +31,20 @@ namespace FlashLearnW.Models
                 , "UserSetName");
         }
 
+        public void AddNewCardSet(ICardSet cardSet)
+        {
+            if (AllowToAddCardSet(cardSet.Name))
+            {
+                UserSet.AllCardSets.Add(cardSet as CardSet);
+            }
+            else
+            {
+                throw new ArgumentException("The given CardSet already exists within the current UserSet."
+               , "UserSetName");
+            }
+
+        }
+
         public bool AllowToAddCardSet(string name)
         {
             bool retval = true;

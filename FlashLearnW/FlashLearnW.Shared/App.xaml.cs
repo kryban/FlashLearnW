@@ -40,6 +40,7 @@ namespace FlashLearnW
         private UserSet appWideUserSet;
         public UserSet AppWideUserSet { get { return appWideUserSet; } }
 
+        private UserSetMaintainer userSetManager;
 
         //public static string TestProp { get { return "Test App global var"; } }
 
@@ -58,6 +59,8 @@ namespace FlashLearnW
             // default or recently loaded userSet will be loaded
             appWideUserSet = new DataLoader().Load();
 
+            userSetManager = new UserSetMaintainer(appWideUserSet);
+            
             GoBack();
 
             // userSet opslaan indien het nog niet bewaard is.
@@ -208,8 +211,14 @@ namespace FlashLearnW
                     case ActivationKind.PickFileContinuation:
 
                         //string passedData = (string)arguments.ContinuationData["keyParameter"];
-                        StorageFile file = arguments.Files.FirstOrDefault(); // your picked file
-                                                                             // do what you want
+                        StorageFile pickedFile = arguments.Files.FirstOrDefault();
+
+                        CardSet pickedCardSet = await new DataLoader().LoadFrom_StorageFile(pickedFile);
+
+                        userSetManager.AddNewCardSet(pickedCardSet);
+
+                        appWideUserSet = userSetManager.UserSet as UserSet;
+
                         break;
                 }
             }

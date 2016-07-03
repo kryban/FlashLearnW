@@ -4,6 +4,8 @@ using FlashLearnW.Interfaces;
 using FlashLearnW.AppSettings;
 using FlashLearnW.Models.FakeData;
 using FlashLearnW.Models;
+using Windows.Storage;
+using System.Threading.Tasks;
 
 namespace FlashLearnW.Common
 {
@@ -32,11 +34,11 @@ namespace FlashLearnW.Common
             }
             else
             {
-                return LoadFromFile(AppSettingsWrapper.GetSetting(AppSettingsKeyNames.RecentlyUsedUserSet));
+                return LoadFromFilePath(AppSettingsWrapper.GetSetting(AppSettingsKeyNames.RecentlyUsedUserSet));
             }
         }
 
-		private UserSet LoadFromFile(string filePath)
+		private UserSet LoadFromFilePath(string filePath)
 		{
             UserSet loadedUserSet;
 
@@ -54,5 +56,10 @@ namespace FlashLearnW.Common
 
 			return loadedUserSet;
 		}
+
+        public async Task<CardSet> LoadFrom_StorageFile(StorageFile file)
+        {
+            return await serializer.DeserializeFrom_StorageFile(file);
+        }
 	}
 }
