@@ -21,28 +21,13 @@ namespace FlashLearnW.Models
         public void AddNewCardSet(string name, string description)
         {
             if (AllowToAddCardSet(name))
-            {
                 UserSet.AllCardSets.Add(new CardSet(name, description));
-                return;
-            }
-
-            // not covered
-            throw new ArgumentException("The given CardSet already exists within the current UserSet."
-                , "UserSetName");
         }
 
         public void AddNewCardSet(ICardSet cardSet)
         {
             if (AllowToAddCardSet(cardSet.Name))
-            {
                 UserSet.AllCardSets.Add(cardSet as CardSet);
-            }
-            else
-            {
-                throw new ArgumentException("The given CardSet already exists within the current UserSet."
-               , "UserSetName");
-            }
-
         }
 
         public bool AllowToAddCardSet(string name)
@@ -54,6 +39,8 @@ namespace FlashLearnW.Models
                 if (set.Name == name)
                 {
                     retval = false;
+                    throw new ArgumentException("The given CardSet already exists within the current UserSet.", 
+                        "UserSetName");
                 }
             }
             return retval;
