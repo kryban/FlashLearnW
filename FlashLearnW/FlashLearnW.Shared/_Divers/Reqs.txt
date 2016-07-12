@@ -68,4 +68,7 @@ To get IntelliSense from the XML schema file, you can open the configuration in 
 After the configuration is updated, start the Windows service by executing 'SemanticLogging-svc.exe -start' from an elev
 ated command prompt.
 
-//////// xx
+//////// Gebruik van continuation manager nodig ? 
+Refactoren. Het hervatten na een pickAndcontinue moet simpelere kunnen.
+
+////////  xx

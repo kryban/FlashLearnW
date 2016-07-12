@@ -1,5 +1,5 @@
 ﻿<Page
-    x:Class="FlashLearnW.Views.OverviewDetail_Page"
+    x:Class="FlashLearnW.Views.OverviewCardDetail_Page"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FlashLearnW.Views"
@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Name="OverviewDetail_Page_CardGrid">
+    <Grid Name="OverviewCardDetail_Page_CardGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
@@ -18,12 +18,12 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="1">
-            <TextBlock Name="OverviewDetail_Page_Title" VerticalAlignment="Bottom" FontSize="35" Foreground="#FF3D76A8"
+            <TextBlock Name="OverviewCardDetail_Page_Title" VerticalAlignment="Bottom" FontSize="35" Foreground="#FF3D76A8"
                        Text="{Binding Name, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" />
         </Grid>
         
         <Grid Grid.Row="2">
-            <TextBlock Name="OverviewDetail_Page_Description" VerticalAlignment="Top" FontSize="20" Foreground="#FFA2A2A2"
+            <TextBlock Name="OverviewCardDetail_Page_Description" VerticalAlignment="Top" FontSize="20" Foreground="#FFA2A2A2"
                        Text="{Binding Description, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,0" 
                        TextWrapping="Wrap" />
         </Grid>
@@ -33,11 +33,10 @@
         </Grid>
 
         <Grid Grid.Row="4">
-            <Button x:ConnectionId='1' Content="Export"                                     />
+            <Button Content="Export" Click="Button_Click_Export_CardSet" />
         </Grid>
 
 
 
     </Grid>
 </Page>
-

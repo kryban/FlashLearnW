@@ -20,8 +20,11 @@ App.xbf
 FlashLearnW.WindowsPhone.xr.xml
 IndexPivotPage.xbf
 SectionPage.xbf
+Views\CardSetsOverview_UserControl.xbf
 Views\Learn_UserControl.xbf
 Views\Maintain_UserControl.xbf
-Views\Overview_UserControl.xbf
+Views\Options_Page.xbf
+Views\OverviewCardDetail_Page.xbf
 Views\OverviewDetail_Page.xbf
+Views\TstPage.xbf
 StoreManifest.xml

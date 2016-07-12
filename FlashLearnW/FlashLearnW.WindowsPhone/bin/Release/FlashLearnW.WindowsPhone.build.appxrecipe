@@ -99,17 +99,26 @@
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\SectionPage.xbf">
       <PackagePath>SectionPage.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\CardSetsOverview_UserControl.xbf">
+      <PackagePath>Views\CardSetsOverview_UserControl.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\Maintain_UserControl.xbf">
       <PackagePath>Views\Maintain_UserControl.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\Learn_UserControl.xbf">
       <PackagePath>Views\Learn_UserControl.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\Options_Page.xbf">
+      <PackagePath>Views\Options_Page.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\OverviewCardDetail_Page.xbf">
+      <PackagePath>Views\OverviewCardDetail_Page.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\OverviewDetail_Page.xbf">
       <PackagePath>Views\OverviewDetail_Page.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\Overview_UserControl.xbf">
-      <PackagePath>Views\Overview_UserControl.xbf</PackagePath>
+    <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\Views\TstPage.xbf">
+      <PackagePath>Views\TstPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Div\C_SharpProjecten\FlashLearnW\FlashLearnW\FlashLearnW\FlashLearnW.WindowsPhone\bin\Release\resources.pri">
       <PackagePath>resources.pri</PackagePath>

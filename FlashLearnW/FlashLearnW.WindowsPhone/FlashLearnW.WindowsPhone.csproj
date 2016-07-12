@@ -100,6 +100,9 @@
     <Compile Include="Views\Options_Page.xaml.cs">
       <DependentUpon>Options_Page.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\OverviewCardDetail_Page.xaml.cs">
+      <DependentUpon>OverviewCardDetail_Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\OverviewDetail_Page.xaml.cs">
       <DependentUpon>OverviewDetail_Page.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
     <Page Include="Views\Options_Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OverviewCardDetail_Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\OverviewDetail_Page.xaml">
       <SubType>Designer</SubType>

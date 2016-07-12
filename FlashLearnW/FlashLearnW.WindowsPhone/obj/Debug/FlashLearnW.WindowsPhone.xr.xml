@@ -175,6 +175,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton" />
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
+    <RootType FullName="FlashLearnW.Views.OverviewCardDetail_Page" />
     <RootType FullName="FlashLearnW.Views.OverviewDetail_Page" />
     <RootType FullName="FlashLearnW.Views.TstPage" />
   </Roots.RootTypes>

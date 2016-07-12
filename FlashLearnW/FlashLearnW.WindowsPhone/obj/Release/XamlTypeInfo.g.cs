@@ -124,35 +124,41 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[13];
-            _typeNameTable[0] = "FlashLearnW.Views.Maintain_UserControl";
-            _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[2] = "FlashLearnW.Views.Learn_UserControl";
-            _typeNameTable[3] = "FlashLearnW.Views.Overview_UserControl";
-            _typeNameTable[4] = "FlashLearnW.IndexPivotPage";
-            _typeNameTable[5] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[6] = "FlashLearnW.SectionPage";
-            _typeNameTable[7] = "FlashLearnW.Models.NavigationHelper";
-            _typeNameTable[8] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[9] = "FlashLearnW.Models.ObservableDictionary";
-            _typeNameTable[10] = "Object";
-            _typeNameTable[11] = "String";
-            _typeNameTable[12] = "FlashLearnW.Views.OverviewDetail_Page";
+            _typeNameTable = new string[16];
+            _typeNameTable[0] = "FlashLearnW.Views.Options_Page";
+            _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "FlashLearnW.Views.Maintain_UserControl";
+            _typeNameTable[4] = "FlashLearnW.Views.Learn_UserControl";
+            _typeNameTable[5] = "FlashLearnW.Views.CardSetsOverview_UserControl";
+            _typeNameTable[6] = "FlashLearnW.IndexPivotPage";
+            _typeNameTable[7] = "FlashLearnW.SectionPage";
+            _typeNameTable[8] = "FlashLearnW.Models.NavigationHelper";
+            _typeNameTable[9] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[10] = "FlashLearnW.Models.ObservableDictionary";
+            _typeNameTable[11] = "Object";
+            _typeNameTable[12] = "String";
+            _typeNameTable[13] = "FlashLearnW.Views.OverviewCardDetail_Page";
+            _typeNameTable[14] = "FlashLearnW.Views.OverviewDetail_Page";
+            _typeNameTable[15] = "FlashLearnW.Views.TstPage";
 
-            _typeTable = new global::System.Type[13];
-            _typeTable[0] = typeof(global::FlashLearnW.Views.Maintain_UserControl);
-            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[2] = typeof(global::FlashLearnW.Views.Learn_UserControl);
-            _typeTable[3] = typeof(global::FlashLearnW.Views.Overview_UserControl);
-            _typeTable[4] = typeof(global::FlashLearnW.IndexPivotPage);
-            _typeTable[5] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[6] = typeof(global::FlashLearnW.SectionPage);
-            _typeTable[7] = typeof(global::FlashLearnW.Models.NavigationHelper);
-            _typeTable[8] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[9] = typeof(global::FlashLearnW.Models.ObservableDictionary);
-            _typeTable[10] = typeof(global::System.Object);
-            _typeTable[11] = typeof(global::System.String);
-            _typeTable[12] = typeof(global::FlashLearnW.Views.OverviewDetail_Page);
+            _typeTable = new global::System.Type[16];
+            _typeTable[0] = typeof(global::FlashLearnW.Views.Options_Page);
+            _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::FlashLearnW.Views.Maintain_UserControl);
+            _typeTable[4] = typeof(global::FlashLearnW.Views.Learn_UserControl);
+            _typeTable[5] = typeof(global::FlashLearnW.Views.CardSetsOverview_UserControl);
+            _typeTable[6] = typeof(global::FlashLearnW.IndexPivotPage);
+            _typeTable[7] = typeof(global::FlashLearnW.SectionPage);
+            _typeTable[8] = typeof(global::FlashLearnW.Models.NavigationHelper);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[10] = typeof(global::FlashLearnW.Models.ObservableDictionary);
+            _typeTable[11] = typeof(global::System.Object);
+            _typeTable[12] = typeof(global::System.String);
+            _typeTable[13] = typeof(global::FlashLearnW.Views.OverviewCardDetail_Page);
+            _typeTable[14] = typeof(global::FlashLearnW.Views.OverviewDetail_Page);
+            _typeTable[15] = typeof(global::FlashLearnW.Views.TstPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -187,14 +193,17 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_Maintain_UserControl() { return new global::FlashLearnW.Views.Maintain_UserControl(); }
-        private object Activate_2_Learn_UserControl() { return new global::FlashLearnW.Views.Learn_UserControl(); }
-        private object Activate_3_Overview_UserControl() { return new global::FlashLearnW.Views.Overview_UserControl(); }
-        private object Activate_4_IndexPivotPage() { return new global::FlashLearnW.IndexPivotPage(); }
-        private object Activate_6_SectionPage() { return new global::FlashLearnW.SectionPage(); }
-        private object Activate_9_ObservableDictionary() { return new global::FlashLearnW.Models.ObservableDictionary(); }
-        private object Activate_12_OverviewDetail_Page() { return new global::FlashLearnW.Views.OverviewDetail_Page(); }
-        private void MapAdd_9_ObservableDictionary(object instance, object key, object item)
+        private object Activate_0_Options_Page() { return new global::FlashLearnW.Views.Options_Page(); }
+        private object Activate_3_Maintain_UserControl() { return new global::FlashLearnW.Views.Maintain_UserControl(); }
+        private object Activate_4_Learn_UserControl() { return new global::FlashLearnW.Views.Learn_UserControl(); }
+        private object Activate_5_CardSetsOverview_UserControl() { return new global::FlashLearnW.Views.CardSetsOverview_UserControl(); }
+        private object Activate_6_IndexPivotPage() { return new global::FlashLearnW.IndexPivotPage(); }
+        private object Activate_7_SectionPage() { return new global::FlashLearnW.SectionPage(); }
+        private object Activate_10_ObservableDictionary() { return new global::FlashLearnW.Models.ObservableDictionary(); }
+        private object Activate_13_OverviewCardDetail_Page() { return new global::FlashLearnW.Views.OverviewCardDetail_Page(); }
+        private object Activate_14_OverviewDetail_Page() { return new global::FlashLearnW.Views.OverviewDetail_Page(); }
+        private object Activate_15_TstPage() { return new global::FlashLearnW.Views.TstPage(); }
+        private void MapAdd_10_ObservableDictionary(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.String, global::System.Object>)instance;
             var newKey = (global::System.String)key;
@@ -212,81 +221,102 @@ namespace FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  FlashLearnW.Views.Maintain_UserControl
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_0_Maintain_UserControl;
+            case 0:   //  FlashLearnW.Views.Options_Page
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_0_Options_Page;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 1:   //  Windows.UI.Xaml.Controls.UserControl
+            case 1:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 2:   //  FlashLearnW.Views.Learn_UserControl
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_2_Learn_UserControl;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 3:   //  FlashLearnW.Views.Overview_UserControl
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_3_Overview_UserControl;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 4:   //  FlashLearnW.IndexPivotPage
-                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_IndexPivotPage;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 5:   //  Windows.UI.Xaml.Controls.Page
+            case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  FlashLearnW.SectionPage
+            case 3:   //  FlashLearnW.Views.Maintain_UserControl
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_3_Maintain_UserControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  FlashLearnW.Views.Learn_UserControl
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_4_Learn_UserControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  FlashLearnW.Views.CardSetsOverview_UserControl
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_5_CardSetsOverview_UserControl;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  FlashLearnW.IndexPivotPage
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_SectionPage;
+                userType.Activator = Activate_6_IndexPivotPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  FlashLearnW.SectionPage
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_7_SectionPage;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("DefaultViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  FlashLearnW.Models.NavigationHelper
+            case 8:   //  FlashLearnW.Models.NavigationHelper
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  Windows.UI.Xaml.DependencyObject
+            case 9:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  FlashLearnW.Models.ObservableDictionary
+            case 10:   //  FlashLearnW.Models.ObservableDictionary
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.DictionaryAdd = MapAdd_9_ObservableDictionary;
+                userType.DictionaryAdd = MapAdd_10_ObservableDictionary;
                 userType.SetIsReturnTypeStub();
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  Object
+            case 11:   //  Object
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 11:   //  String
+            case 12:   //  String
                 xamlType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  FlashLearnW.Views.OverviewDetail_Page
+            case 13:   //  FlashLearnW.Views.OverviewCardDetail_Page
                 userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_OverviewDetail_Page;
+                userType.Activator = Activate_13_OverviewCardDetail_Page;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 14:   //  FlashLearnW.Views.OverviewDetail_Page
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_14_OverviewDetail_Page;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 15:   //  FlashLearnW.Views.TstPage
+                userType = new global::FlashLearnW.FlashLearnW_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_TstPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
